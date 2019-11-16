@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/***** Header begins *****/
+.header {
+  background: url(../images/header-bg.png) repeat-x bottom left #76c7c1;
+}
+.header .logo {
+  padding: 21px 0px 25px 9px;
+}
+.header .nav li {
+  line-height: 80px;
+  text-transform: uppercase;
+  padding: 0 0 0 54px;
+}
+.header .nav li a {
+  color: #feffff;
+  text-decoration: none;
+}
+.header .nav li a:hover {
+  text-decoration: underline;
+}
+.header .dropdown .dd-padd {
+  padding: 25px 0 0 0;
+}
+.header .dropdown .dd-padd a {
+  line-height: 30px;
+  background: url(../images/dropdown-center.png) repeat-x bottom left;
+  display: block;
+  height: 33px;
+}
+.header .dropdown .dd-padd .dd-left {
+  background: url(../images/dropdown-left.png) no-repeat;
+  width: 31px;
+  height: 33px;
+  top: 10px;
+}
+.header .dropdown .dd-padd .dd-right {
+  background: url(../images/dropdown-right.png) no-repeat;
+  width: 19px;
+  height: 33px;
+}
+.header .nav .search {
+  padding-right: 5px;
+}
+.header .search a span {
+  display: block;
+  background: url(../images/search.png) no-repeat bottom;
+  width: 18px;
+  height: 25px;
+  margin-top: 26px;
+}
+/***** Header ends *****/
+
+/***** Page Intro begins *****/
+.page-intro {
+  background: #ececec;
+}
+.page-intro .page-title {
+  line-height: 80px;
+  font-size: 19px;
+  font-weight: 400;
+  color: #777d7d;
+  text-transform: uppercase;
+  padding: 0 0 0 9px;
+}
+.page-intro .breadcrumbs li {
+  line-height: 80px;
+  color: #7c807f;
+}
+.page-intro .breadcrumbs li:before {
+  content: "/";
+  padding: 0 8px;
+}
+.page-intro .breadcrumbs li:first-child::before {
+  content: "";
+}
+.page-intro .breadcrumbs li a {
+  color: #7c807f;
+  text-decoration: none;
+}
+.page-intro .breadcrumbs li a:hover {
+  color: #e9645b;
+  text-decoration: underline;
+}
+.page-intro .bottom-decor {
+  background: #f3f3f3;
+}
+.page-intro .bottom-decor .inverted-triangle {
+  background: url(../images/inverted-triangle.png) no-repeat top left;
+  height: 16px;
+}
+/***** Page Intro ends *****/
+
+/***** Performance begins *****/
+.performance {
+  background: #f3f3f3;
+  color: #6d6d6d;
+}
+.performance .info .heading {
+  line-height: 68px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #e9645b;
+}
+.performance .info p {
+  line-height: 19px;
+  font-size: 14px;
+  color: #848a8a;
+}
+.performance .aside {
+  width: 300px;
+}
+.performance .aside strong {
+  line-height: 53px;
+  font-size: 16px;
+  color: #798281;
+  padding: 0 0 0 2px;
+}
+.performance .aside ul {
+  padding-top: 12px;
+}
+.performance .aside li {
+  background: url(../images/list-icon.png) no-repeat left center;
+  line-height: 27px;
+  padding-left: 20px;
+}
+.performance .main {
+  line-height: 25px;
+  width: 570px;
+  padding: 13px 0 0 0;
+}
+.performance .main p {
+  padding: 0 21px;
+}
+.performance .main p a {
+  color: #e9645b;
+}
+.performance .main p a:hover {
+  color: #76c7c1;
+}
+.performance .main .visuals {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 55px 0 0 11px;
+}
+.performance .main .visuals li {
+  padding: 0 0 0 23px;
+}
+.performance .main .visuals li:first-child {
+  padding: 0;
+}
+.performance .main .visuals .number {
+  line-height: 48px;
+  font-size: 29px;
+  font-weight: 600;
+  margin-top: -43px;
+}
+.performance .main .visuals .visual-title {
+  line-height: 39px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.performance .col3-left .r {
+  padding: 0 0 0 26px;
+  width: 274px;
+}
+.performance .dialouge {
+  background: url(../images/quote-top.png) no-repeat top left #f8f8f8;
+  width: 271px;
+  margin: 6px 0 0 3px;
+}
+.performance .dialouge p {
+  line-height: 25px;
+  font-style: italic;
+  padding:  11px 17px 2px;
+  letter-spacing: 0.35px;
+}
+.performance .speeker {
+  background: url(../images/quote-bottom.png) no-repeat top left #f3f3f3;
+  padding: 0 0 0 59px;
+}
+/***** Performance ends *****/
+
+/***** Our team begins *****/
+.our-team {
+  background: url(../images/ourwork_pattern.png) repeat-x top left #ececec;
+}
+.our-team h2{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: #7e8c8c;
+  text-transform: uppercase;
+}
+/***** Our team ends *****/
+
+/***** Best Solution begins *****/
+.best-solution {
+  background: #f3f3f3;
+}
+
+/***** Best Solution ends *****/
+
+/***** Footer begins *****/
+.footer {
+  background: #76c7c1;
+}
+
+/***** Footer ends *****/
