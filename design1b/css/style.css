@@ -1,1 +1,33 @@
 @charset "UTF-8";
+
+.logo {
+}
+.nav {
+}
+/* Very very small screens */
+@media only screen and (min-width: 20em) {
+}
+
+/* Samsung Galaxy S5 portrait */
+@media (min-width: 22.5em) {
+}
+
+/* Very Small screens */
+@media (min-width: 30em) {
+}
+
+/* Landscape Very Small Screens */
+@media (min-width: 40em) {
+}
+
+/* Small screens */
+@media (min-width: 48em) {
+}
+
+/* Medium screens */
+@media (min-width: 62em) {
+}
+
+/* Large screens */
+@media (min-width: 73.125em) {
+}
