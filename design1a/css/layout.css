@@ -23,9 +23,15 @@
 .col3-left .r {
   float: right;
 }
+.col2-left .left {
+  float: left;
+}
+.col2-left .main {
+  float: right;
+}
 /* --------------------- */
 
-/* Header begins */
+/***** Header begins *****/
 .header .logo {
   float: left;
 }
@@ -42,7 +48,7 @@
 .header .dropdown .dd-padd .dd-right {
   float: right;
 }
-/* Header ends */
+/***** Header ends *****/
 
 
 /***** Page Intro begins *****/
@@ -61,7 +67,7 @@
 
 /***** Performance begins *****/
 .performance .layout-padd {
-  padding: 51px 0 64px 0;
+  padding: 51px 0 0 0;
 }
 .performance .main .visuals li {
   float: left;
@@ -70,15 +76,70 @@
 
 
 /***** Our team begins *****/
-
+.our-team .content-box {
+  float: left;
+}
+.our-team .content-box-wrapper  {
+  position: relative;
+}
+.our-team .content-box-wrapper > div {
+  position: absolute;
+}
+.our-team .content-box .image-holder {
+  position: relative;
+}
+.our-team .content-box .button {
+  position: absolute;
+}
+.our-team .content-box .content {
+  position: absolute;
+}
+.our-team .content-box .top-shadow {
+  position: absolute;
+}
+.our-team .content-box .bottom-shadow {
+  position: absolute;
+}
+.our-team .content-box .social li {
+  float: left;
+}
+.our-team .content-box .button a {
+  position: relative;
+}
+.our-team .content-box .button a:before {
+  position: absolute;
+}
+.our-team .content-box .button a:after {
+  position: absolute;
+}
+.our-team .content-box .social li:hover {
+  position: relative;
+}
 /***** Our team ends *****/
 
 
 /***** Best Solution begins *****/
-
+.best-solution .clients > div {
+  float: left;
+}
+.best-solution .clients .controls {
+  float: right;
+}
+.best-solution .clients .controls .left,
+.best-solution .clients .controls .right {
+  float: left;
+}
+.best-solution .client-slider li {
+  float: left;
+}
 /***** Best Solution ends *****/
 
 
 /***** Footer begins *****/
-
+.footer .posts .post-img {
+  float: left;
+}
+.footer .copyright .main li {
+  float: left;
+}
 /***** Footer ends *****/
