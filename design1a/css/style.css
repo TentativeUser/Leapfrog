@@ -220,22 +220,22 @@
   text-align: center;
 }
 .our-team .content-box .button a:before {
-  content: url(../images/team-btns/btn-top.png);
+  content: url(../images/btn-top.png);
   display: block;
   top: -27px;
   left: 0;
 }
 .our-team .content-box .button a:after {
-  content: url(../images/team-btns/btn-bottom.png);
+  content: url(../images/btn-bottom.png);
   display: block;
   bottom: -23px;
   left: 0;
 }
 .our-team .content-box:hover .button a:before {
-  content: url(../images/team-btns/btn-top-hover.png);
+  content: url(../images/btn-top-hover.png);
 }
 .our-team .content-box:hover .button a:after {
-  content: url(../images/team-btns/btn-bottom-hover.png);
+  content: url(../images/btn-bottom-hover.png);
 }
 .our-team .content-box:hover .button a {
   background: #e9645b;
