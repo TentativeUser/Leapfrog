@@ -185,7 +185,7 @@
 /***** Our team begins *****/
 .our-team {
   background: url(../images/ourwork_pattern.png) repeat-x top left #ececec;
-  padding: 64px 0 220px 0;
+  padding: 63px 0 219px 0;
 }
 .our-team h2 {
   font-size: 40px;
@@ -286,20 +286,21 @@
 /***** Best Solution begins *****/
 .best-solution {
   background: #f3f3f3;
-  padding: 198px 0 66px 0;
+  padding: 195px 0 66px 0;
 }
 .best-solution h2 {
   line-height: 70px;
-  font-size: 40px;
+  font-size: 43px;
   font-weight: lighter;
   text-align: center;
   color: #e9645b;
+  padding: 0 0 2px 0;
 }
 .best-solution p {
-  line-height: 19px;
+  line-height: 20px;
   text-align: center;
   color: #6d6d6d;
-  padding: 0 115px;
+  padding: 0 115px 19px 115px;
 }
 .best-solution .clients {
   padding: 18px 0 0 0;
@@ -365,7 +366,7 @@
   background: url(../images/footer-bg.png) repeat-x top left #76c7c1;
 }
 .footer .companylinks {
-  padding: 45px 0 26px 0;
+  padding: 45px 0 46px 0;
 }
 .footer .companylinks a {
   color: #feffff;
@@ -383,8 +384,7 @@
   padding-left: 5px;
 }
 .footer .col3-left > .left p {
-  line-height: 23px;
-  padding-top: 1px;
+  line-height: 24px;
 }
 .footer .col3-left > .left .info {
   padding-top: 20px;
