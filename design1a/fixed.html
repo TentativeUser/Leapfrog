@@ -2,57 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Design-1-B</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Design-1-A</title>
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/reset-res.css" type="text/css">
-  <link rel="stylesheet" href="css/layout-res.css" type="text/css">
-  <link rel="stylesheet" href="css/style-res.css" type="text/css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <!-- Header Begins -->
-  <header class="header">
+  <div class="header">
     <div class="container clearfix">
       <div class="logo">
-        <a href="#"><img src="images/logo.png" alt="Tollens"></a>
+        <img src="images/logo.png" alt="Tollens" />
       </div>
       <div class="nav">
-        <a href="#" class="toggler"></a>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">about</a></li>
           <li><a href="#">services</a></li>
-          <li class="dropdown curved-edges">
-            <a href="#">
-              portfolio
-            </a>
-            <ul class="dropdown-content">
-              <li><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">services</a></li>
-              <li><a href="#">blog</a></li>
-            </ul>
+          <li class="dropdown">
+            <div class="dd-padd">
+              <a href="#">
+                <span class="dd-left"></span>portfolio<span class="dd-right"></span>
+              </a>
+            </div>
           </li>
           <li><a href="#">blog</a></li>
           <li><a href="#">features</a></li>
           <li><a href="#">contacts</a></li>
-          <li class="search clearfix">
-            <a href="#" class="search-icon"></a>
-            <div class="search-bar">
-              <input type="text" placeholder="Search the site">
-            </div>
+          <li class="search">
+            <a href="#">
+              <span></span>
+            </a>
           </li>
         </ul>
       </div>
     </div>
-  </header>
+  </div>
   <!-- Header Ends -->
-  <!-- Page heading begins -->
-  <div class="page-heading">
-    <div class="container clearfix">
+
+  <!-- Page Intro begins -->
+  <div class="page-intro">
+    <div class="container">
       <h1 class="page-title">
         about us
       </h1>
@@ -62,19 +57,21 @@
           <li>About us</li>
         </ul>
       </div>
+      <div class="clearfix"></div>
     </div>
+
     <div class="bottom-decor">
       <div class="container">
         <div class="inverted-triangle"></div>
       </div>
     </div>
   </div>
-  <!-- Page heading ends -->
+  <!-- Page Intro ends -->
 
   <!-- Performance begins -->
   <div class="performance">
     <div class="container">
-      <div>
+      <div class="info">
         <h2 class="heading">Donec faucibus ultricies congue</h2>
         <p>Dolorem corrupti debitis, omnis, aspernatur tenetur pariatur nobis molestias, expedita fugit at voluptates
           excepturi!
@@ -84,7 +81,7 @@
         </p>
       </div>
       <div class="col3-left layout-padd clearfix">
-        <aside class="aside left">
+        <div class="aside left">
           <strong>Why Choose Us?</strong>
           <ul>
             <li>Quo voluptatem voluptatibus</li>
@@ -94,40 +91,38 @@
             <li>At modi maxime possimus</li>
             <li>Non vel repellendus</li>
           </ul>
-        </aside>
+        </div>
         <div class="main-wrapper">
           <div class="main">
             <p>Quo voluptatem voluptatibus doloribus nam quibusdam? Voluptate, unde eveniet quod nesciunt
               inventore minus <a href="#">expedita id</a> eius, quis fuga iusto ipsam? Non vel repellendus in tempore!
             </p>
             <div class="visuals">
-              <div class="grid-box-2">
-                <div class="content">
+              <ul>
+                <li>
                   <img src="images/50.png" alt="50">
                   <div class="number">50</div>
                   <div class="visual-title">Suspendisse</div>
-                </div>
-                <div class="content">
+                </li>
+                <li>
                   <img src="images/70.png" alt="70">
                   <div class="number">70</div>
                   <div class="visual-title">macenas</div>
-                </div>
-              </div>
-              <div class="grid-box-2">
-                <div class="content">
-                  <img src="images/80.png" alt="50">
+                </li>
+                <li>
+                  <img src="images/80.png" alt="80">
                   <div class="number">80</div>
                   <div class="visual-title">Suspendisse</div>
-                </div>
-                <div class="content">
-                  <img src="images/100.png" alt="70">
+                </li>
+                <li>
+                  <img src="images/100.png" alt="100">
                   <div class="number">100</div>
-                  <div class="visual-title">macenas</div>
-                </div>
-              </div>
+                  <div class="visual-title">Suspendisse</div>
+                </li>
+              </ul>
             </div>
           </div>
-          <aside class="r aside">
+          <div class="r aside">
             <strong>What Clients Say?</strong>
             <div class="dialouge">
               <p>
@@ -138,7 +133,7 @@
             <div class="speeker">
               <strong>John Doe</strong>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </div>
@@ -151,152 +146,140 @@
       <h2>Our Team</h2>
       <div class="content-box-wrapper">
         <div class="clearfix">
-          <div class="grid-box-2">
-            <div class="content-box">
-              <div class="image-holder">
-                <div class="top-shadow"></div>
-                <div class="image"></div>
-                <div class="content">
-                  <p>
-                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
-                    pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
-                  </p>
-                  <ul class="social clearfix">
-                    <li>
-                      <a href="#">
-                        <img src="images/fb.png" alt="Check my facebook">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/twitter.png" alt="Check my twitter">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/google+.png" alt="Check my google+">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/linkedin.png" alt="Check my linkedin">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bottom-shadow"></div>
-                <div class="button"><a href="#">Jhon Doe</a></div>
+          <div class="content-box">
+            <div class="image-holder">
+              <div class="top-shadow"></div>
+              <div class="image"></div>
+              <div class="content">
+                Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
+                pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
+                <ul class="social clearfix">
+                  <li>
+                    <a href="#">
+                      <img src="images/fb.png" alt="Check my facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/twitter.png" alt="Check my twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/google+.png" alt="Check my google+">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/linkedin.png" alt="Check my linkedin">
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="content-box">
-              <div class="image-holder">
-                <div class="top-shadow"></div>
-                <div class="image"></div>
-                <div class="content">
-                  <p>
-                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
-                    pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
-                  </p>
-                  <ul class="social clearfix">
-                    <li>
-                      <a href="#">
-                        <img src="images/fb.png" alt="Check my facebook">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/twitter.png" alt="Check my twitter">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/google+.png" alt="Check my google+">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/linkedin.png" alt="Check my linkedin">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bottom-shadow"></div>
-                <div class="button"><a href="#">Jhon Doe</a></div>
-              </div>
+              <div class="bottom-shadow"></div>
+              <div class="button"><a href="#">Jhon Doe</a></div>
             </div>
           </div>
-          <div class="grid-box-2">
-            <div class="content-box">
-              <div class="image-holder">
-                <div class="top-shadow"></div>
-                <div class="image"></div>
-                <div class="content">
-                  <p>
-                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
-                    pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
-                  </p>
-                  <ul class="social clearfix">
-                    <li>
-                      <a href="#">
-                        <img src="images/fb.png" alt="Check my facebook">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/twitter.png" alt="Check my twitter">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/google+.png" alt="Check my google+">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/linkedin.png" alt="Check my linkedin">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bottom-shadow"></div>
-                <div class="button"><a href="#">Jhon Doe</a></div>
+          <div class="content-box">
+            <div class="image-holder">
+              <div class="top-shadow"></div>
+              <div class="image"></div>
+              <div class="content">
+                Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
+                pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
+                <ul class="social clearfix">
+                  <li>
+                    <a href="#">
+                      <img src="images/fb.png" alt="Check my facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/twitter.png" alt="Check my twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/google+.png" alt="Check my google+">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/linkedin.png" alt="Check my linkedin">
+                    </a>
+                  </li>
+                </ul>
               </div>
+              <div class="bottom-shadow"></div>
+              <div class="button"><a href="#">Jhon Doe</a></div>
             </div>
-            <div class="content-box">
-              <div class="image-holder">
-                <div class="top-shadow"></div>
-                <div class="image"></div>
-                <div class="content">
-                  <p>
-                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
-                    pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
-                  </p>
-                  <ul class="social clearfix">
-                    <li>
-                      <a href="#">
-                        <img src="images/fb.png" alt="Check my facebook">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/twitter.png" alt="Check my twitter">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/google+.png" alt="Check my google+">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="images/linkedin.png" alt="Check my linkedin">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bottom-shadow"></div>
-                <div class="button"><a href="#">Jhon Doe</a></div>
+          </div>
+          <div class="content-box">
+            <div class="image-holder">
+              <div class="top-shadow"></div>
+              <div class="image"></div>
+              <div class="content">
+                Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
+                pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
+                <ul class="social clearfix">
+                  <li>
+                    <a href="#">
+                      <img src="images/fb.png" alt="Check my facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/twitter.png" alt="Check my twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/google+.png" alt="Check my google+">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/linkedin.png" alt="Check my linkedin">
+                    </a>
+                  </li>
+                </ul>
               </div>
+              <div class="bottom-shadow"></div>
+              <div class="button"><a href="#">Jhon Doe</a></div>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="image-holder">
+              <div class="top-shadow"></div>
+              <div class="image"></div>
+              <div class="content">
+                Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam
+                pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
+                <ul class="social clearfix">
+                  <li>
+                    <a href="#">
+                      <img src="images/fb.png" alt="Check my facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/twitter.png" alt="Check my twitter">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/google+.png" alt="Check my google+">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/linkedin.png" alt="Check my linkedin">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bottom-shadow"></div>
+              <div class="button"><a href="#">Jhon Doe</a></div>
             </div>
           </div>
         </div>
@@ -333,14 +316,14 @@
           </div>
         </div>
         <div class="client-slider">
-          <div class="clearfix">
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-            <div class="items"><img src="images/jquery.png" alt="jQuery"></div>
-          </div>
+          <ul class="clearfix">
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+            <li><img src="images/jquery.png" alt="jQuery"></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -359,15 +342,15 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, asperiores? Expedita vero perferendis
               voluptatibus. Odit harum deserunt corrupti incidunt possimus velit.</p>
             <div class="info">
-              <p>Phone:
+              <p>Phone: 
                 <a href="tell:+18225695896">
                   <em class="phone">182 2569 5896</em>
                 </a>
               </p>
               <p>e-mail:
-                <a href="mailto:info@tollens.info">
-                  <em class="email">info@tollens.info</em>
-                </a>
+                  <a href="mailto:info@tollens.info">
+                <em class="email">info@tollens.info</em>
+              </a>
               </p>
             </div>
           </div>
