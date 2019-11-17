@@ -519,7 +519,8 @@
   background-color: #6bb4ad;
 }
 .footer .copyright .left {
-  line-height: 3.125em;
+  font-size: 0.75em;
+  line-height: 4.166666666666667em;
   width: auto;
 }
 .footer .copyright .main-wrapper {
