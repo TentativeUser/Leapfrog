@@ -16,3 +16,7 @@ a {
 a:hover{
   text-decoration: underline;
 }
+html,
+body {
+  background: #f3f3f3;
+}
