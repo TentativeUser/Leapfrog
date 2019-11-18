@@ -1,0 +1,371 @@
+/* slider begins */
+.slider {
+  padding-top: 2.125em;
+  padding-bottom: 4.0625em;
+}
+.project-slideshow {
+  width: 100%;
+}
+.project-slideshow .image-holder {
+  background: url(../images/assign2020/project-slideshow.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.project-slideshow .image-holder:before {
+  content: url(../images/assign2020/project-slideshow-top.png);
+  display: block;
+  width: 100%;
+  height: 0.625em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project-slideshow .image-holder::after {
+  content: url(../images/assign2020/project-slideshow-bottom.png);
+  display: block;
+  width: 100%;
+  height: 0.625em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.image-holder .controls {
+  position: relative;
+  width: 100%;
+}
+.image-holder a {
+  position: absolute;
+  top: 49%;
+  left: 0;
+  width: 2.5em;
+  height: 2.5em;
+  background: url(../images/assign2020/slider-control-left-sm.png);
+}
+.image-holder .control-right {
+  background: url(../images/assign2020/slider-control-right-sm.png);
+  left: auto;
+  right: 0;
+}
+.indicators {
+  padding-top: 1.875em;
+  width: 6.875em;
+  margin: 0 auto;
+}
+.indicators li {
+  float: left;
+  padding-left: 0.625em;
+}
+.indicators li:first-child {
+  padding-left: 0;
+}
+.indicators a {
+  background: #b2babc;
+  display: block;
+  width: 1.875em;
+  height: 0.125em;
+}
+.indicators a:hover {
+  background: #dd524f;
+  display: block;
+  width: 1.875em;
+  height: 0.125em;
+}
+.secondary {
+  padding-top: 3.75em;
+  display: none;
+}
+.secondary .image-holder {
+  background: url(../images/assign2020/blog-page-slideshow.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.secondary .sidebar .image-holder {
+  background: url(../images/assign2020/sidebar-slideshow.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.secondary .sidebar {
+  display: none;
+}
+.secondary .sidebar .gallery {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #829291;
+  padding-top: 4.5625em;
+}
+.secondary .sidebar .gallery .grid-box-3 {
+  padding-top: 1.375em;
+}
+.secondary .sidebar .gallery .item {
+  background: url(../images/assign2020/sidebar-gallery.png) no-repeat center;
+  width: 4.375em;
+  height: 4.25em;
+  float: left;
+  padding-left: 1.875em;
+}
+.secondary .sidebar .gallery .item:first-child {
+  padding-left: 0;
+}
+/* slider ends */
+
+/* cards-box begins */
+.cards-box .content-box-wrapper {
+  text-align: center;
+}
+.cards-box .content-box .content-holder {
+  background: #f8f8f8;
+  position: relative;
+  width: 16.875em;
+  height: 19.6875em;
+  margin: 0 auto 5em auto;
+}
+.cards-box .content-box .image {
+  width: 3.5625em;
+  height: 3.5625em;
+  margin: 0 auto;
+  margin-top: 2.8125em;
+}
+.thumbs-up {
+  background: url(../images/icons/thumbs-up.png) no-repeat center center;
+}
+.flag {
+  background: url(../images/icons/flag.png) no-repeat center center;
+}
+.flask {
+  background: url(../images/icons/flask.png) no-repeat center center;
+}
+.key {
+  background: url(../images/icons/key.png) no-repeat center center;
+}
+.content-holder:hover .thumbs-up {
+  background: url(../images/icons/thumbs-up-hover.png) no-repeat center center;
+}
+.content-holder:hover .flag {
+  background: url(../images/icons/flag-hover.png) no-repeat center center;
+}
+.content-holder:hover .flask {
+  background: url(../images/icons/flask-hover.png) no-repeat center center;
+}
+.content-holder:hover .key {
+  background: url(../images/icons/key-hover.png) no-repeat center center;
+}
+.cards-box .content-box h3 {
+  color: #758c86;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-top: 0.75em;
+}
+.cards-box .content-box p {
+  color: #758c86;
+  font-size: 0.75em;
+  line-height: 1.75em;
+  padding: 2.25em 1.25em 0 1.25em;
+  /* padding-top: 0.75em; */
+}
+.cards-box .content-box:hover .content-holder {
+  background: #ffffff;
+}
+.cards-box .content-box .button {
+  position: absolute;
+  bottom: -1.5em;
+  left: 2.3125em;
+  z-index: 10;
+}
+.cards-box .content-box .button a {
+  background: #76c7c1;
+  color: #fcffff;
+  text-decoration: none;
+  display: block;
+  font-size: 0.75em;
+  line-height: 4.5em;
+  width: 16.66666666666667em;
+  text-align: center;
+  z-index: 10;
+}
+.cards-box .content-box .button a:before {
+  content: url(../images/btn-top.png);
+  display: block;
+  top: -2.25em;
+  left: 0;
+  position: absolute;
+}
+.cards-box .content-box .button a:after {
+  content: url(../images/btn-bottom.png);
+  display: block;
+  bottom: -1.916666666666667em;
+  left: 0;
+  position: absolute;
+}
+.cards-box .content-box:hover .button a:before {
+  content: url(../images/btn-top-hover.png);
+}
+.cards-box .content-box:hover .button a:after {
+  content: url(../images/btn-bottom-hover.png);
+}
+.cards-box .content-box:hover .button a {
+  background: #e9645b;
+}
+.cards-box .content-box .content-holder:before {
+  content: '';
+  display: block;
+  background: url(../images/content-top-shadow.png) no-repeat top left;
+  width: 16.875em;
+  height: 0.3125em;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.cards-box .content-box .content-holder:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(../images/content-bottom-shadow.png) no-repeat bottom left;
+  width: 16.875em;
+  height: 0.625em;
+  bottom: 0;
+  left: 0;
+}
+
+/* cards-box ends */
+
+
+/* Very very small screens 320px */
+@media only screen and (min-width: 20em) {
+  .project-slideshow {
+    height: 10.844017em;
+  }
+}
+
+/* Samsung Galaxy S5 portrait 360px */
+@media (min-width: 22.5em) {
+  .project-slideshow {
+    height: 12.339743em;
+  }
+}
+
+/* Very Small screens 480px */
+@media (min-width: 30em) {
+  .project-slideshow {
+    height: 16.826923em;
+  }
+}
+
+/* Landscape Very Small Screens 640px */
+@media (min-width: 40em) {
+  .project-slideshow {
+    height: 22.809829em;
+  }
+  /***** cards-box begins *****/
+  .cards-box .content-box-wrapper {
+    position: relative;
+    width: 35.625em;
+    margin: 0 auto;
+  }
+  .cards-box .grid-box-2 .content-box {
+    float: left;
+  }
+  .cards-box .grid-box-2:after {
+    content: "";
+    display: block;
+    float: none;
+    clear: both;
+  }
+  .cards-box .grid-box-2 .content-box {
+    padding-left: 1.875em;
+  }
+  .cards-box .grid-box-2 .content-box:first-child {
+    padding-left: 0;
+  }
+  /***** cards-box ends *****/
+}
+
+/* Small screens 768px */
+@media (min-width: 48em) {
+  .project-slideshow {
+    height: 27.596153em;
+  }
+}
+
+/* Medium screens 992px */
+@media (min-width: 62em) {
+  .project-slideshow {
+    height: 35.972222em;
+  }
+  .project-slideshow .image-holder a {
+    position: absolute;
+    top: 49%;
+    left: 0;
+    width: 3.125em;
+    height: 3.75em;
+    background: url(../images/assign2020/slider-control-left.png);
+  }
+  .project-slideshow .image-holder .control-right {
+    background: url(../images/assign2020/slider-control-right.png);
+    left: auto;
+    right: 0;
+  }
+  .project-slideshow .indicators {
+    padding-top: 1.875em;
+    width: 12.5em;
+    margin: 0 auto;
+  }
+  .secondary {
+    display: block;
+  }
+}
+
+/* Large screens 1200px */
+@media (min-width: 75em) {
+  .project-slideshow {
+    height: 43.75em;
+  }
+  .secondary .project-slideshow {
+    float: left;
+    width: 54.375em;
+    height: 35.625em;
+  }
+  .secondary .sidebar {
+    display: block;
+    float: right;
+    width: 16.875em;
+  }
+  .secondary .sidebar .project-slideshow {
+    width: 16.875em;
+    height: 12.75em;
+  }
+  .secondary .sidebar .project-slideshow .indicators {
+    padding-top: 1.875em;
+    width: 6.875em;
+  }
+  
+  /***** Our team begins *****/
+  .cards-box .content-box {
+    float: left;
+  }
+  .cards-box .content-box-wrapper {
+    position: relative;
+    width: auto;
+  }
+  .cards-box .content-box-wrapper .grid-box-2 {
+    float: left;
+  }
+  .cards-box .grid-box-2:after {
+    content: none;
+    display: none;
+    float: none;
+    clear: none;
+  }
+  .cards-box .grid-box-2 .content-box:first-child {
+    padding-left: 1.875em;
+  }
+  .cards-box .grid-box-2:first-child .content-box:first-child {
+    padding-left: 0;
+  }
+  /***** Our team ends *****/
+}

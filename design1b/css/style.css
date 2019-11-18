@@ -20,6 +20,7 @@
   left: 0;
   display: none;
   background: #76c7c1;
+  z-index: 20;
 }
 .header .nav .toggler:hover + ul {
   display: block;
@@ -132,6 +133,7 @@
   font-size: 0.75em;
   line-height: 6.6667em;
   color: #7c807f;
+  text-transform: capitalize;
 }
 .page-heading .breadcrumbs li:before {
   content: "/";
