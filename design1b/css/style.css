@@ -376,6 +376,7 @@
   font-size: 1em;
   line-height: 3.3125em;
   padding-right: 1em;
+  background: #f3f3f3;
 }
 .best-solution .clients .separator {
   width: 1em;
@@ -392,6 +393,7 @@
 }
 .best-solution .clients .controls {
   padding-top: 0.4375em;
+  background: #f3f3f3;
 }
 .best-solution .clients .controls .left,
 .best-solution .clients .controls .right {
@@ -492,7 +494,7 @@
 }
 .footer .blog em,
 .footer .blog strong {
-  font-size: 1.375;
+  font-size: 1.375em;
 }
 .footer .blog .posts ul {
   padding: 0.1875em 0 0 0;

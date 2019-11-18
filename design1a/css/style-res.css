@@ -369,27 +369,24 @@
 .best-solution .clients {
   padding: 1.5em 0 0 0;
   color: #7f928e;
+  background: url(../images/happy-client-line.png) repeat-x left 3.1875em;
 }
 .best-solution .clients .text {
   font-size: 1em;
   line-height: 3.3125em;
   padding-right: 1em;
+  background: #f3f3f3;
 }
 .best-solution .clients .separator {
-  width: 1em;
   padding: 1.4375em 0 0 0;
 }
 .best-solution .clients .separator .circle {
   background: url(../images/happy-client-circle.png) no-repeat center left;
   height: 0.5625em;
 }
-.best-solution .clients .separator .line {
-  background: url(../images/happy-client-line.png) repeat-x center left;
-  height: 0.5625em;
-  padding-left: 0.5625em;
-}
 .best-solution .clients .controls {
   padding-top: 0.4375em;
+  background: #f3f3f3;
 }
 .best-solution .clients .controls .left,
 .best-solution .clients .controls .right {
