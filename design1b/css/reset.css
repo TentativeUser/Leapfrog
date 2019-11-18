@@ -10,13 +10,9 @@ li {
   list-style: none;
 }
 a {
+  color: #f3f3f3;
   text-decoration: none;
 }
-a{
+a:hover{
   text-decoration: underline;
-}
-html,
-body {
-  overflow-x: hidden;
-  background: #f3f3f3;
 }
