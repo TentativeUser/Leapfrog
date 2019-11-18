@@ -11,7 +11,9 @@ li {
 }
 a {
   text-decoration: none;
-  color: #feffff;
+}
+a{
+  text-decoration: underline;
 }
 html,
 body {
