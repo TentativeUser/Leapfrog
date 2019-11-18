@@ -13,7 +13,8 @@ a {
   text-decoration: none;
   color: #feffff;
 }
-html {
+html,
+body {
   overflow-x: hidden;
   background: #f3f3f3;
 }
