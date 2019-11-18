@@ -549,6 +549,10 @@
 
 /* Very very small screens 320px*/
 @media only screen and (min-width: 20em) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
 }
 
 /* Samsung Galaxy S5 portrait 360px */
