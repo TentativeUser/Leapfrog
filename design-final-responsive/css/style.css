@@ -35,6 +35,7 @@ header nav li:first-child a {
 }
 header .logo {
   width: 9.4375em;
+  padding-right: 15px;
   float: right;
 }
 header .social:before {
@@ -60,8 +61,8 @@ header .social li a {
   font-size: 0.875em;
 }
 header .social li a .icon {
-  width: 3.928571428571429em;
-  height: 3.928571428571429em;
+  width: 3.9285em;
+  height: 3.9285em;
 }
 /* header ends */
 
@@ -136,7 +137,7 @@ header .social li a .icon {
   font-family: "Hind", sans-serif;
   font-weight: 300;
   font-size: 0.9375em;
-  line-height: 3.333333333333333em;
+  line-height: 3.3333em;
   display: block;
   border: none;
   width: 100%;
@@ -173,6 +174,7 @@ header .social li a .icon {
 .posts .post {
   font-family: "Hind", sans-serif;
   margin-bottom: 59px;
+  /* font-size: 0.7692307692307694em; */
 }
 .posts .main figure {
   position: relative;
@@ -221,7 +223,7 @@ header .social li a .icon {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.75em;
-  line-height: 1.428571428571429em;
+  line-height: 1.4285em;
   padding: 9px 0 13px 0;
 }
 .posts .main .tag,
@@ -244,14 +246,14 @@ header .social li a .icon {
 .posts .main .read-more {
   font-size: 0.875em;
   text-transform: uppercase;
-  line-height: 2.142857142857143em;
+  line-height: 2.1428em;
   border-right: 2px solid #d7d7d7;
   border-left: 2px solid #d7d7d7;
   padding: 0 14px;
   color: #212121;
 }
 .posts .main .post .likes:after {
-  content: '';
+  content: "";
   display: block;
   float: none;
   clear: both;
@@ -270,7 +272,7 @@ header .social li a .icon {
 .quotation {
   background: #131d1c;
   color: #ffffff;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   padding-top: 48px;
   text-transform: uppercase;
   text-align: center;
@@ -290,17 +292,21 @@ header .social li a .icon {
   line-height: 1.8em;
   padding: 0 15px 40px;
 }
-.posts .main .quotation a{
+.posts .main .quotation a {
   font-size: 1em;
   line-height: 1.8em;
   color: #999999;
 }
-.posts .main .quotation blockquote a{
-  display: block;
+.posts .main .quotation blockquote a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.posts .main .quotation blockquote a:hover {
+  color: #999999;
 }
 .posts .sidebar {
   display: none;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   margin-bottom: 59px;
 }
 .posts .sidebar .search button,
@@ -323,7 +329,7 @@ header .social li a .icon {
   color: #ffffff;
 }
 .posts .sidebar .lists .heading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #212121;
   font-weight: 700;
@@ -333,7 +339,7 @@ header .social li a .icon {
   padding-bottom: 15px;
 }
 .posts .sidebar .lists {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 500;
   font-size: 1em;
   color: #212121;
@@ -344,17 +350,17 @@ header .social li a .icon {
 .posts .sidebar .lists .latest {
   line-height: 2.0427em;
 }
-.posts .sidebar .lists li{
+.posts .sidebar .lists li {
   border-bottom: 1px solid #f7f7f7;
 }
-.posts .sidebar .lists li:first-child{
+.posts .sidebar .lists li:first-child {
   border-top: 1px solid #f7f7f7;
 }
 .posts .sidebar .lists .right {
   float: right;
 }
 .posts .sidebar .lists .right:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
   float: none;
@@ -363,36 +369,36 @@ header .social li a .icon {
   padding-top: 23px;
   padding-bottom: 15px;
 }
-.posts .sidebar .latest img{
+.posts .sidebar .latest img {
   width: 26.66666666666667%;
 }
-.posts .sidebar .latest div{
+.posts .sidebar .latest div {
   width: 70%;
 }
-.posts .sidebar .latest h3{
+.posts .sidebar .latest h3 {
   font-size: 0.9em;
   font-weight: 400;
   line-height: 1.0625em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .posts .sidebar .latest h3 a {
   color: #212121;
 }
-.posts .sidebar .latest p{
+.posts .sidebar .latest p {
   font-size: 0.8em;
   font-weight: 400;
   color: #999999;
 }
-.posts .sidebar .latest span{
+.posts .sidebar .latest span {
   padding-right: 5px;
 }
-.posts .sidebar .latest i{
+.posts .sidebar .latest i {
   font-style: normal;
 }
 .posts .sidebar .social {
   text-align: center;
 }
-.posts .sidebar .social li{
+.posts .sidebar .social li {
   float: left;
   width: 20%;
 }
@@ -408,7 +414,59 @@ header .social li a .icon {
 /* post ends */
 
 /* footer begins */
-
+footer {
+  background: #212429;
+  color: #f9f9fb;
+  font-weight: 300;
+  font-family: "Hind", sans-serif;
+}
+footer img {
+  max-width: 100%;
+}
+footer h3 {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  line-height: 3.25em;
+}
+footer p {
+  font-size: 1em;
+  line-height: 1.8667em;
+}
+footer a {
+  color: #f9f9fb;
+}
+footer a .fa {
+  padding-right: 5px;
+}
+.footer-section ul li {
+  padding-bottom: 15px;
+}
+.footer-section ul li p {
+  padding-left: 20px;
+}
+footer .copyright {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  background: #17191b;
+  font-size: 0.875em;
+  line-height: 2.9285em;
+}
+footer .copyright p {
+  font-size: 1em;
+  line-height: 2.9285em;
+}
+footer .copyright a {
+  color: #ffffff;
+}
+.footer-section > div{
+  padding: 0 15px;
+}
+.footer-section .images img {
+  width: 32.3333%;
+}
 /* footer ends */
 
 /* Small devices (portrait tablets and large phones, 640px and up) */
@@ -427,6 +485,22 @@ header .social li a .icon {
     float: left;
   }
   .posts .main .post .social {
+    float: right;
+  }
+  footer .container {
+    padding: 0;
+  }
+  .footer-section {
+    width: 50%;
+    float: left;
+  }
+  .section-wrapper:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+  }
+  header .main-wrapper {
     float: right;
   }
 }
@@ -504,9 +578,12 @@ header .social li a .icon {
   .posts .sidebar form {
     padding-bottom: 40px;
   }
-  .posts .sidebar .adsense img{
+  .posts .sidebar .adsense img {
     width: 100%;
     display: block;
+  }
+  header .main-wrapper {
+    width: 75%;
   }
 }
 
@@ -514,14 +591,10 @@ header .social li a .icon {
 @media only screen and (min-width: 64em) {
   header .logo {
     padding-left: 0;
-    float: none;
-    margin: 0 auto;
+    padding-right: 0;
   }
   header .social:before {
     content: none;
-  }
-  header .social {
-    margin-top: -55px;
   }
   .newsletter form label {
     font-size: 1.25em;
@@ -530,7 +603,7 @@ header .social li a .icon {
   }
   .newsletter form input {
     font-size: 0.9375em;
-    line-height: 3.333333333333333em;
+    line-height: 3.3333em;
   }
   .newsletter form div {
     margin: 0 15px;
@@ -540,10 +613,16 @@ header .social li a .icon {
     width: 21.2307%;
     padding: 39px 20px 0;
   }
+  header .main-wrapper {
+    width: 60%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 75em) {
+  header .main-wrapper {
+    width: 41.3125em;
+  }
   .banner {
     background: url(../images/banner/banner-bg.png) repeat-x top left;
   }
@@ -625,5 +704,12 @@ header .social li a .icon {
   .posts .sidebar {
     width: 20.2307%;
     padding: 39px 25px 0;
+  }
+  .section-wrapper:after {
+    content: none;
+  }
+  .section-wrapper {
+    float: left;
+    width: 50%;
   }
 }

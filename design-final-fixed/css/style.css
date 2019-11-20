@@ -19,11 +19,11 @@ header .social li a {
   font-size: 0.875em;
 }
 header .social li a .icon {
-  width: 3.928571428571429em;
-  height: 3.928571428571429em;
+  width: 3.9285em;
+  height: 3.9285em;
 }
 .banner .slider .slide figcaption {
-  color: #fff;
+  color: #ffffff;
   font-family: "Hind", sans-serif;
   padding: 0 15px;
 }
@@ -38,7 +38,7 @@ header .social li a .icon {
   font-family: "Hind", sans-serif;
   font-weight: 300;
   font-size: 0.9375em;
-  line-height: 3.333333333333333em;
+  line-height: 3.3333em;
   display: block;
   border: none;
   width: 100%;
@@ -49,7 +49,7 @@ header .social li a .icon {
 }
 .newsletter form button[type="submit"] {
   background: #212121;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2px;
@@ -98,28 +98,25 @@ header .social li a .icon {
 }
 .posts .main .tag,
 .posts .main .desc {
-  color: #999;
+  color: #999999;
   text-transform: uppercase;
 }
 .posts .main .desc {
-  color: #999;
+  color: #999999;
   text-transform: uppercase;
   margin-bottom: 21px;
-}
-.posts .main .desc a {
-  color: #999;
 }
 .posts .main .read-more {
   font-size: 0.875em;
   text-transform: uppercase;
-  line-height: 2.142857142857143em;
+  line-height: 2.1428em;
   border-right: 2px solid #d7d7d7;
   border-left: 2px solid #d7d7d7;
   padding: 0 14px;
   color: #212121;
 }
 .posts .main .post.bg {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #f5f5f7;
 }
 .posts a:hover .fa {
@@ -128,7 +125,7 @@ header .social li a .icon {
 }
 .quotation {
   background: #131d1c;
-  color: #fff;
+  color: #ffffff;
   font-family: "Hind", sans-serif;
   padding-top: 48px;
   text-transform: uppercase;
@@ -147,7 +144,15 @@ header .social li a .icon {
 .posts .main .quotation a {
   font-size: 1em;
   line-height: 1.8em;
-  color: #999;
+  color: #999999;
+}
+.posts .main .quotation blockquote a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.posts .main .quotation blockquote a:hover,
+.posts .main .desc a {
+  color: #999999;
 }
 .posts .sidebar .search button,
 .posts .sidebar .search input {
@@ -166,7 +171,7 @@ header .social li a .icon {
 .posts .sidebar .search button {
   width: 16.66666666666667%;
   background: #212121;
-  color: #fff;
+  color: #ffffff;
 }
 .posts .sidebar .lists .heading {
   font-family: "Montserrat", sans-serif;
@@ -225,10 +230,7 @@ header .social li a .icon {
 .posts .sidebar .latest p {
   font-size: 0.8em;
   font-weight: 400;
-  color: #999;
-}
-.posts .sidebar .latest span {
-  padding-right: 5px;
+  color: #999999;
 }
 .posts .sidebar .latest i {
   font-style: normal;
@@ -248,8 +250,70 @@ header .social li a .icon {
 .banner .slider .slide img {
   width: 100%;
 }
+footer {
+  background: #212429;
+  color: #f9f9fb;
+  font-weight: 300;
+  font-family: "Hind", sans-serif;
+}
+footer img {
+  max-width: 100%;
+}
+footer h3 {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  line-height: 3.25em;
+}
+footer p {
+  font-size: 1em;
+  line-height: 1.8667em;
+}
+footer a {
+  color: #f9f9fb;
+}
+footer a .fa,
+.posts .sidebar .latest span {
+  padding-right: 5px;
+}
+.footer-section ul li {
+  padding-bottom: 15px;
+}
+footer .copyright {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  background: #17191b;
+  font-size: 0.875em;
+  line-height: 2.9285em;
+}
+footer .copyright p {
+  font-size: 1em;
+  line-height: 2.9285em;
+}
+footer .copyright a {
+  color: #ffffff;
+}
+.footer-section > div {
+  padding: 0 15px;
+}
+.footer-section .images img {
+  width: 32.3333%;
+}
+header .social {
+  float: right;
+  border-top: none;
+}
 .posts .main .post .likes li {
   float: left;
+}
+.posts .main .post .social,
+.posts .sidebar .lists .right {
+  float: right;
+}
+footer .container {
+  padding: 0;
 }
 header nav ul {
   position: absolute;
@@ -269,7 +333,8 @@ header nav li {
   float: left;
   padding-left: 44px;
 }
-header nav li:first-child {
+header nav li:first-child,
+.footer-section ul li p {
   padding-left: 20px;
 }
 header nav li:first-child a {
@@ -277,7 +342,7 @@ header nav li:first-child a {
 }
 header nav li a {
   display: block;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   font-family: "Hind", sans-serif;
   border-bottom: none;
@@ -319,24 +384,17 @@ header nav li a {
 }
 header .logo {
   width: 9.4375em;
+  float: left;
   padding-left: 0;
-  float: none;
-  margin: 0 auto;
-}
-header .social:before {
-  display: block;
-  clear: both;
-  float: none;
-  content: none;
-}
-header .social {
-  float: right;
-  border-top: none;
-  margin-top: -55px;
+  padding-right: 0;
 }
 .newsletter form input {
   font-size: 0.9375em;
-  line-height: 3.333333333333333em;
+  line-height: 3.3333em;
+}
+header .main-wrapper {
+  float: right;
+  width: 41.3125em;
 }
 .banner {
   background: url(../images/banner/banner-bg.png) repeat-x top left;
@@ -371,8 +429,7 @@ header .social {
   float: none;
   padding: 5px;
 }
-.banner .slider .indicators a,
-.posts .main .quotation blockquote a {
+.banner .slider .indicators a {
   display: block;
 }
 .banner .slider .indicators span {
@@ -417,7 +474,7 @@ header .social {
 }
 .newsletter form div {
   line-height: 3.125em;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #f3f3f3;
   width: 17.2em;
   margin: 0 15px;
@@ -428,7 +485,7 @@ header .social {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.75em;
-  line-height: 1.428571428571429em;
+  line-height: 1.4285em;
   padding: 0 58px;
 }
 .posts .main article p {
@@ -446,16 +503,24 @@ header .social {
   line-height: 1.8em;
   padding: 0 58px 40px;
 }
-.posts .main .post .social,
-.posts .sidebar .lists .right {
-  float: right;
-}
 .posts .sidebar {
   font-family: "Hind", sans-serif;
   margin-bottom: 59px;
   display: block;
   float: right;
-  background: #fff;
+  background: #ffffff;
   width: 20.2307%;
   padding: 39px 25px 0;
+}
+.section-wrapper:after,
+header .social:before {
+  display: block;
+  float: none;
+  clear: both;
+  content: none;
+}
+.section-wrapper,
+.footer-section {
+  float: left;
+  width: 50%;
 }
