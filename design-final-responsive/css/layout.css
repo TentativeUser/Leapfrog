@@ -39,3 +39,10 @@
     width: 73.125em;
   }
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 97.5em) {
+  .container {
+    width: 95.625em;
+  }
+}

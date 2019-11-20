@@ -10,6 +10,11 @@ header {
   font-family: 'Lato', sans-serif;
   letter-spacing: 0.25px;
 }
+.wrapper {
+  min-width: 360px;
+  width: 100%;
+  overflow-x: auto;
+}
 h1 {
   font-weight: 300;
   line-height: 2em;

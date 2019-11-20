@@ -14,56 +14,66 @@ a:hover {
 body {
   background: #f7f7f7;
 }
-.fa {
+.icon{
   text-indent: -10000px;
   display: block;
   width: 3.4375em;
   height: 3.4375em;
   background-size: 100%;
+  text-indent: -10000px;
 }
-.fa-menu {
+.ico-menu {
   background: url(../images/header/menu-icon.png) no-repeat center;
 }
-.fa-rss {
+.ico-rss {
   background: url(../images/header/rss-feed.png) no-repeat center;
 }
-.fa-twitter {
+.ico-twitter {
   background: url(../images/header/twitter.png) no-repeat center;
 }
-.fa-tumbler {
+.ico-tumbler {
   background: url(../images/header/tumbler.png) no-repeat center;
 }
-.fa-fb {
+.ico-fb {
   background: url(../images/header/facebook.png) no-repeat center;
 }
-.fa-search {
+.ico-search {
   background: url(../images/header/search.png) no-repeat center;
 }
-.fa-menu:hover {
+.ico-menu:hover {
   background: url(../images/header/menu-icon-hover.png) no-repeat center;
 }
-.fa-rss:hover {
+.ico-rss:hover {
   background: url(../images/header/rss-feed-hover.png) no-repeat center;
 }
-.fa-twitter:hover {
+.ico-twitter:hover {
   background: url(../images/header/twitter-hover.png) no-repeat center;
 }
-.fa-tumbler:hover {
+.ico-tumbler:hover {
   background: url(../images/header/tumbler-hover.png) no-repeat center;
 }
-.fa-fb:hover {
+.ico-fb:hover {
   background: url(../images/header/facebook-hover.png) no-repeat center;
 }
-.fa-search:hover {
+.ico-search:hover {
   background: url(../images/header/search-hover.png) no-repeat center;
 }
 
-.fa-square {
+.ico-square {
   background: url(../images/banner/box-inactive.png) no-repeat center;
 }
-.fa-square:hover {
+.ico-square:hover {
   background: url(../images/banner/box-active.png) no-repeat center;
 }
-.fa-square.active {
+.ico-square.active {
   background: url(../images/banner/box-active.png) no-repeat center;
+}
+.ico-pinterest {
+  background: url(../images/post/pinterest.png) no-repeat center;
+}
+.ico-travel {
+  background: url(../images/post/tag-travel.png) no-repeat center;
+}
+.ico-quote {
+  background: url(../images/post/tag-quote.png) no-repeat center;
 }

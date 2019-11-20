@@ -1,7 +1,7 @@
 /* header begins */
 header.wrapper {
   background: #212429;
-  line-height: 55px;
+  line-height: 3.4375em;
 }
 header nav {
   background: transparent;
@@ -59,7 +59,7 @@ header .social li a {
   color: #fff;
   font-size: 0.875em;
 }
-header .social li a .fa {
+header .social li a .icon {
   width: 3.928571428571429em;
   height: 3.928571428571429em;
 }
@@ -98,7 +98,6 @@ header .social li a .fa {
   padding: 5px;
 }
 .banner .slider .indicators a {
-  text-indent: -10000px;
   display: block;
 }
 .banner .slider .indicators span {
@@ -111,26 +110,31 @@ header .social li a .fa {
 /* banner ends */
 
 /* newsletter begins */
+.newsletter {
+  padding-bottom: 59px;
+}
 .newsletter form {
   padding-top: 18px;
   text-align: center;
   background: #f9f9fb;
   border: 1px solid #f5f5f7;
+  padding-bottom: 17px;
 }
 .newsletter .container {
   background: #f7f7f7;
 }
 .newsletter form label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0;
   line-height: 1.4em;
 }
+.newsletter form button[type="submit"],
 .newsletter form input {
-  font-family: 'Hind', sans-serif;
-  font-weight:  300;
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
   font-size: 0.9375em;
   line-height: 3.333333333333333em;
   display: block;
@@ -141,7 +145,7 @@ header .social li a .fa {
 .newsletter form input:focus {
   outline: none;
 }
-.newsletter form input[type="submit"] {
+.newsletter form button[type="submit"] {
   background: #212121;
   color: #ffffff;
   text-transform: uppercase;
@@ -153,11 +157,259 @@ header .social li a .fa {
   margin: 9px 15px;
   padding: 0 15px;
   background: #ffffff;
+  border: 1px solid #f3f3f3;
 }
 .newsletter form .form-button {
   padding: 0;
+  border: none;
 }
 /* newsletter ends */
+
+/* post begins */
+.posts .main figure img {
+  width: 100%;
+  display: block;
+}
+.posts .post {
+  font-family: "Hind", sans-serif;
+  margin-bottom: 59px;
+}
+.posts .main figure {
+  position: relative;
+  border: 1px solid #f5f5f7;
+}
+.posts .main .bg figure {
+  border: none;
+  border-bottom: 1px solid #f5f5f7;
+  box-shadow: 2px 2px 2px 2px #dddddd13;
+}
+.posts .main figure .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 51px;
+  height: 44px;
+}
+.posts .main article {
+  text-align: center;
+}
+.posts .main .tag-image {
+  position: relative;
+  margin: 0 auto;
+  bottom: 45px;
+  width: 40px;
+  height: 35px;
+  box-shadow: 3px 3px 3px 0px #eaeaea13;
+}
+.posts .main article {
+  font-size: 1em;
+  margin-bottom: 26px;
+}
+.posts .main .desc {
+  color: #999999;
+  text-transform: uppercase;
+}
+.posts .main .desc .fa {
+  margin: 0 12px;
+}
+.posts .main article {
+  padding: 23px 0 44px 0;
+  border-bottom: 1px solid #f2f2f4;
+}
+.posts .main article h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  line-height: 1.428571428571429em;
+  padding: 9px 0 13px 0;
+}
+.posts .main .tag,
+.posts .main .desc {
+  color: #999999;
+  text-transform: uppercase;
+}
+.posts .main .desc {
+  margin-bottom: 21px;
+}
+.posts .main .desc a {
+  color: #999999;
+}
+.posts .main article p {
+  line-height: 1.75em;
+  color: #464646;
+  padding: 0 15px;
+  margin-bottom: 37px;
+}
+.posts .main .read-more {
+  font-size: 0.875em;
+  text-transform: uppercase;
+  line-height: 2.142857142857143em;
+  border-right: 2px solid #d7d7d7;
+  border-left: 2px solid #d7d7d7;
+  padding: 0 14px;
+  color: #212121;
+}
+.posts .main .post .likes:after {
+  content: '';
+  display: block;
+  float: none;
+  clear: both;
+}
+.posts .main .post .likes li {
+  float: left;
+}
+.posts .main .post.bg {
+  background: #ffffff;
+  border: 1px solid #f5f5f7;
+}
+.posts a:hover .fa {
+  position: relative;
+  top: -2px;
+}
+.quotation {
+  background: #131d1c;
+  color: #ffffff;
+  font-family: 'Hind', sans-serif;
+  padding-top: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 70px;
+  margin-bottom: 59px;
+}
+.posts .main .quotation .tag-image {
+  position: relative;
+  margin: 0 auto;
+  bottom: 66px;
+  width: 44px;
+  height: 39px;
+  box-shadow: none;
+}
+.posts .main .quotation blockquote {
+  font-size: 1.25em;
+  line-height: 1.8em;
+  padding: 0 15px 40px;
+}
+.posts .main .quotation a{
+  font-size: 1em;
+  line-height: 1.8em;
+  color: #999999;
+}
+.posts .main .quotation blockquote a{
+  display: block;
+}
+.posts .sidebar {
+  display: none;
+  font-family: 'Hind', sans-serif;
+  margin-bottom: 59px;
+}
+.posts .sidebar .search button,
+.posts .sidebar .search input {
+  display: block;
+  float: left;
+  border: none;
+  font-size: 0.9375em;
+  line-height: 3.3333em;
+  text-transform: uppercase;
+}
+.posts .sidebar .search input[type="text"] {
+  width: 83.33333333333333%;
+  color: #212121;
+  background: #f9f9fb;
+}
+.posts .sidebar .search button {
+  width: 16.66666666666667%;
+  background: #212121;
+  color: #ffffff;
+}
+.posts .sidebar .lists .heading {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+.posts .sidebar .lists {
+  font-family: 'Hind', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #212121;
+  line-height: 3.75em;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+.posts .sidebar .lists .latest {
+  line-height: 2.0427em;
+}
+.posts .sidebar .lists li{
+  border-bottom: 1px solid #f7f7f7;
+}
+.posts .sidebar .lists li:first-child{
+  border-top: 1px solid #f7f7f7;
+}
+.posts .sidebar .lists .right {
+  float: right;
+}
+.posts .sidebar .lists .right:after {
+  content: '';
+  display: block;
+  clear: both;
+  float: none;
+}
+.posts .sidebar .latest {
+  padding-top: 23px;
+  padding-bottom: 15px;
+}
+.posts .sidebar .latest img{
+  width: 26.66666666666667%;
+}
+.posts .sidebar .latest div{
+  width: 70%;
+}
+.posts .sidebar .latest h3{
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.0625em;
+  font-family: 'Montserrat', sans-serif;
+}
+.posts .sidebar .latest h3 a {
+  color: #212121;
+}
+.posts .sidebar .latest p{
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #999999;
+}
+.posts .sidebar .latest span{
+  padding-right: 5px;
+}
+.posts .sidebar .latest i{
+  font-style: normal;
+}
+.posts .sidebar .social {
+  text-align: center;
+}
+.posts .sidebar .social li{
+  float: left;
+  width: 20%;
+}
+.posts .sidebar .social li a {
+  color: #464646;
+}
+.posts .sidebar .slider img {
+  width: 100%;
+}
+.posts .sidebar .facebook img {
+  width: 100%;
+}
+/* post ends */
+
+/* footer begins */
+
+/* footer ends */
 
 /* Small devices (portrait tablets and large phones, 640px and up) */
 @media only screen and (min-width: 40em) {
@@ -167,6 +419,15 @@ header .social li a .fa {
   }
   header .social {
     border-top: none;
+  }
+  .posts .main .post .likes {
+    float: left;
+  }
+  .posts .main .post .likes li {
+    float: left;
+  }
+  .posts .main .post .social {
+    float: right;
   }
 }
 
@@ -229,6 +490,24 @@ header .social li a .fa {
   .newsletter form label {
     font-size: 1.25em;
   }
+  .posts .main {
+    width: 73.0769%;
+    float: left;
+  }
+  .posts .sidebar {
+    display: block;
+    width: 22.2307%;
+    float: right;
+    background: #ffffff;
+    padding: 39px 10px 0;
+  }
+  .posts .sidebar form {
+    padding-bottom: 40px;
+  }
+  .posts .sidebar .adsense img{
+    width: 100%;
+    display: block;
+  }
 }
 
 /* Large devices (laptops/desktops, 1024px and up) */
@@ -256,6 +535,10 @@ header .social li a .fa {
   .newsletter form div {
     margin: 0 15px;
     padding: 0 15px;
+  }
+  .posts .sidebar {
+    width: 21.2307%;
+    padding: 39px 20px 0;
   }
 }
 
@@ -286,7 +569,6 @@ header .social li a .fa {
     padding: 5px;
   }
   .banner .slider .indicators a {
-    text-indent: -10000px;
     display: block;
   }
   .banner .slider .indicators span {
@@ -300,9 +582,9 @@ header .social li a .fa {
     right: 35px;
   }
   .banner .slider .controls span {
-    text-indent: -10000px;
     display: block;
     margin-bottom: 14px;
+    text-indent: -10000px;
   }
   .banner .slider .controls .control-up {
     background: url("../images/banner/control-up.png") no-repeat center;
@@ -327,5 +609,21 @@ header .social li a .fa {
     width: 17.2em;
     margin: 0 15px;
     padding: 0 15px;
+  }
+  .posts .main article h2 {
+    padding: 0 58px;
+  }
+  .posts .main article p {
+    padding: 0 58px;
+  }
+  .posts .main .post .likes {
+    padding: 0 58px;
+  }
+  .posts .main .quotation blockquote {
+    padding: 0 58px 40px;
+  }
+  .posts .sidebar {
+    width: 20.2307%;
+    padding: 39px 25px 0;
   }
 }

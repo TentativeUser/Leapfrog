@@ -1,0 +1,461 @@
+header.wrapper {
+  background: #212429;
+  line-height: 3.4375em;
+}
+header nav {
+  background: transparent;
+  float: left;
+}
+header .social li {
+  float: left;
+  border-right: 1px solid #3c3c3c;
+}
+header .social li:first-child {
+  float: left;
+  border-left: 1px solid #3c3c3c;
+}
+header .social li a {
+  color: #fff;
+  font-size: 0.875em;
+}
+header .social li a .icon {
+  width: 3.928571428571429em;
+  height: 3.928571428571429em;
+}
+.banner .slider .slide figcaption {
+  color: #fff;
+  font-family: "Hind", sans-serif;
+  padding: 0 15px;
+}
+.newsletter {
+  padding-bottom: 59px;
+}
+.newsletter .container {
+  background: #f7f7f7;
+}
+.newsletter form button[type="submit"],
+.newsletter form input {
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  line-height: 3.333333333333333em;
+  display: block;
+  border: none;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.newsletter form input:focus {
+  outline: none;
+}
+.newsletter form button[type="submit"] {
+  background: #212121;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.newsletter form .form-button {
+  padding: 0;
+  border: none;
+}
+.posts .post {
+  font-family: "Hind", sans-serif;
+  margin-bottom: 59px;
+}
+.posts .main figure {
+  position: relative;
+  border: 1px solid #f5f5f7;
+}
+.posts .main .bg figure {
+  border: none;
+  border-bottom: 1px solid #f5f5f7;
+  box-shadow: 2px 2px 2px 2px #dddddd13;
+}
+.posts .main figure .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 51px;
+  height: 44px;
+}
+.posts .main .tag-image {
+  position: relative;
+  margin: 0 auto;
+  bottom: 45px;
+  width: 40px;
+  height: 35px;
+  box-shadow: 3px 3px 3px #eaeaea13;
+}
+.posts .main .desc .fa {
+  margin: 0 12px;
+}
+.posts .main article {
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 26px;
+  padding: 23px 0 44px;
+  border-bottom: 1px solid #f2f2f4;
+}
+.posts .main .tag,
+.posts .main .desc {
+  color: #999;
+  text-transform: uppercase;
+}
+.posts .main .desc {
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+.posts .main .desc a {
+  color: #999;
+}
+.posts .main .read-more {
+  font-size: 0.875em;
+  text-transform: uppercase;
+  line-height: 2.142857142857143em;
+  border-right: 2px solid #d7d7d7;
+  border-left: 2px solid #d7d7d7;
+  padding: 0 14px;
+  color: #212121;
+}
+.posts .main .post.bg {
+  background: #fff;
+  border: 1px solid #f5f5f7;
+}
+.posts a:hover .fa {
+  position: relative;
+  top: -2px;
+}
+.quotation {
+  background: #131d1c;
+  color: #fff;
+  font-family: "Hind", sans-serif;
+  padding-top: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 70px;
+  margin-bottom: 59px;
+}
+.posts .main .quotation .tag-image {
+  position: relative;
+  margin: 0 auto;
+  bottom: 66px;
+  width: 44px;
+  height: 39px;
+  box-shadow: none;
+}
+.posts .main .quotation a {
+  font-size: 1em;
+  line-height: 1.8em;
+  color: #999;
+}
+.posts .sidebar .search button,
+.posts .sidebar .search input {
+  display: block;
+  float: left;
+  border: none;
+  font-size: 0.9375em;
+  line-height: 3.3333em;
+  text-transform: uppercase;
+}
+.posts .sidebar .search input[type="text"] {
+  width: 83.33333333333333%;
+  color: #212121;
+  background: #f9f9fb;
+}
+.posts .sidebar .search button {
+  width: 16.66666666666667%;
+  background: #212121;
+  color: #fff;
+}
+.posts .sidebar .lists .heading {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+.posts .sidebar .lists {
+  font-family: "Hind", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #212121;
+  line-height: 3.75em;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+.posts .sidebar .lists .latest {
+  line-height: 2.0427em;
+}
+.posts .sidebar .lists li {
+  border-bottom: 1px solid #f7f7f7;
+}
+.posts .sidebar .lists li:first-child {
+  border-top: 1px solid #f7f7f7;
+}
+.posts .sidebar .lists .right:after,
+.posts .main .post .likes:after {
+  content: "";
+  display: block;
+  clear: both;
+  float: none;
+}
+.posts .sidebar .latest {
+  padding-top: 23px;
+  padding-bottom: 15px;
+}
+.posts .sidebar .latest img {
+  width: 26.66666666666667%;
+}
+.posts .sidebar .latest div {
+  width: 70%;
+}
+.posts .sidebar .latest h3 {
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.0625em;
+  font-family: "Montserrat", sans-serif;
+}
+.posts .sidebar .latest h3 a {
+  color: #212121;
+}
+.posts .sidebar .latest p {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #999;
+}
+.posts .sidebar .latest span {
+  padding-right: 5px;
+}
+.posts .sidebar .latest i {
+  font-style: normal;
+}
+.posts .sidebar .social {
+  text-align: center;
+}
+.posts .sidebar .social li {
+  float: left;
+  width: 20%;
+}
+.posts .sidebar .social li a {
+  color: #464646;
+}
+.posts .sidebar .facebook img,
+.posts .sidebar .slider img,
+.banner .slider .slide img {
+  width: 100%;
+}
+.posts .main .post .likes li {
+  float: left;
+}
+header nav ul {
+  position: absolute;
+  top: 55px;
+  display: none;
+  width: auto;
+  left: auto;
+  z-index: 10;
+}
+header nav:hover ul {
+  z-index: 5;
+  display: block;
+}
+header nav li {
+  background: transparent;
+  padding: 0;
+  float: left;
+  padding-left: 44px;
+}
+header nav li:first-child {
+  padding-left: 20px;
+}
+header nav li:first-child a {
+  border-top: none;
+}
+header nav li a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif;
+  border-bottom: none;
+}
+.banner .slider .slide figcaption span {
+  display: block;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding-left: 2px;
+}
+.newsletter form {
+  padding-top: 18px;
+  background: #f9f9fb;
+  border: 1px solid #f5f5f7;
+  padding-bottom: 17px;
+  text-align: left;
+}
+.newsletter form > label {
+  float: left;
+  width: 22%;
+}
+.newsletter form > div {
+  float: left;
+  width: 22%;
+  margin: 0 4px;
+}
+.posts .main {
+  width: 73.0769%;
+  float: left;
+}
+.posts .sidebar form {
+  padding-bottom: 40px;
+}
+.posts .sidebar .adsense img,
+.posts .main figure img {
+  width: 100%;
+  display: block;
+}
+header .logo {
+  width: 9.4375em;
+  padding-left: 0;
+  float: none;
+  margin: 0 auto;
+}
+header .social:before {
+  display: block;
+  clear: both;
+  float: none;
+  content: none;
+}
+header .social {
+  float: right;
+  border-top: none;
+  margin-top: -55px;
+}
+.newsletter form input {
+  font-size: 0.9375em;
+  line-height: 3.333333333333333em;
+}
+.banner {
+  background: url(../images/banner/banner-bg.png) repeat-x top left;
+}
+.banner .slider,
+.banner .slider .slide {
+  position: relative;
+}
+.banner .slider figcaption {
+  padding: 0;
+  position: absolute;
+  left: 100px;
+  bottom: 161px;
+}
+.banner .slider .slide figcaption p {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.25em;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  max-width: 13.75em;
+}
+.banner .slider .indicators {
+  margin: 0 auto;
+  position: absolute;
+  width: auto;
+  right: 57px;
+  top: 201px;
+}
+.banner .slider .indicators li {
+  float: none;
+  padding: 5px;
+}
+.banner .slider .indicators a,
+.posts .main .quotation blockquote a {
+  display: block;
+}
+.banner .slider .indicators span {
+  width: 0.5em;
+  height: 0.5em;
+}
+.banner .slider .controls {
+  display: block;
+  position: absolute;
+  top: 126px;
+  right: 35px;
+}
+.banner .slider .controls span {
+  display: block;
+  margin-bottom: 14px;
+  text-indent: -10000px;
+}
+.banner .slider .controls .control-up {
+  background: url("../images/banner/control-up.png") no-repeat center;
+  width: 11px;
+  height: 21px;
+}
+.banner .slider .controls .control-down {
+  background: url("../images/banner/control-down.png") no-repeat center;
+  width: 11px;
+  height: 21px;
+}
+.banner .slider .featured-article {
+  background: url(../images/banner/featured-article.png) no-repeat center;
+  width: 10px;
+  height: 125px;
+}
+.newsletter form label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  width: 7.5em;
+  padding: 0 20px 0 15px;
+}
+.newsletter form div {
+  line-height: 3.125em;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  width: 17.2em;
+  margin: 0 15px;
+  padding: 0 15px;
+}
+.posts .main article h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  line-height: 1.428571428571429em;
+  padding: 0 58px;
+}
+.posts .main article p {
+  line-height: 1.75em;
+  color: #464646;
+  margin-bottom: 37px;
+  padding: 0 58px;
+}
+.posts .main .post .likes {
+  float: left;
+  padding: 0 58px;
+}
+.posts .main .quotation blockquote {
+  font-size: 1.25em;
+  line-height: 1.8em;
+  padding: 0 58px 40px;
+}
+.posts .main .post .social,
+.posts .sidebar .lists .right {
+  float: right;
+}
+.posts .sidebar {
+  font-family: "Hind", sans-serif;
+  margin-bottom: 59px;
+  display: block;
+  float: right;
+  background: #fff;
+  width: 20.2307%;
+  padding: 39px 25px 0;
+}
