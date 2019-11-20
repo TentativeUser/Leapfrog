@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body {
+  background: #f7f7f7;
+}
+.fa {
+  text-indent: -10000px;
+  display: block;
+  width: 3.4375em;
+  height: 3.4375em;
+  background-size: 100%;
+}
+.fa-menu {
+  background: url(../images/header/menu-icon.png) no-repeat center;
+}
+.fa-rss {
+  background: url(../images/header/rss-feed.png) no-repeat center;
+}
+.fa-twitter {
+  background: url(../images/header/twitter.png) no-repeat center;
+}
+.fa-tumbler {
+  background: url(../images/header/tumbler.png) no-repeat center;
+}
+.fa-fb {
+  background: url(../images/header/facebook.png) no-repeat center;
+}
+.fa-search {
+  background: url(../images/header/search.png) no-repeat center;
+}
+.fa-menu:hover {
+  background: url(../images/header/menu-icon-hover.png) no-repeat center;
+}
+.fa-rss:hover {
+  background: url(../images/header/rss-feed-hover.png) no-repeat center;
+}
+.fa-twitter:hover {
+  background: url(../images/header/twitter-hover.png) no-repeat center;
+}
+.fa-tumbler:hover {
+  background: url(../images/header/tumbler-hover.png) no-repeat center;
+}
+.fa-fb:hover {
+  background: url(../images/header/facebook-hover.png) no-repeat center;
+}
+.fa-search:hover {
+  background: url(../images/header/search-hover.png) no-repeat center;
+}
+
+.fa-square {
+  background: url(../images/banner/box-inactive.png) no-repeat center;
+}
+.fa-square:hover {
+  background: url(../images/banner/box-active.png) no-repeat center;
+}
+.fa-square.active {
+  background: url(../images/banner/box-active.png) no-repeat center;
+}

@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Design Final Responsive</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Deco Blog</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
 </head>
+
 <body>
-  Design Final Responsive here...
+  <!-- IE8, 9, 10, Chrome, FF, Safari -->
+  <header class="wrapper">
+    <div class="container">
+      <nav>
+        <a href="#">
+          <span class="fa fa-menu"></span>
+        </a>
+        <ul class="clearfix">
+          <li><a href="#">home</a></li>
+          <li><a href="#">post types</a></li>
+          <li><a href="#">travel</a></li>
+          <li><a href="#">feature</a></li>
+          <li><a href="#">fashion</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <img src="images/header/logo.png" alt="Deco Blog">
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="#"><span class="fa fa-rss">RSS</span></a></li>
+          <li><a href="#"><span class="fa fa-twitter">Tweet</span></a></li>
+          <li><a href="#"><span class="fa fa-tumbler">Tumbler</span></a></li>
+          <li><a href="#"><span class="fa fa-fb">Facebook</span></a></li>
+          <li><a href="#"><span class="fa fa-search">Search</span></a></li>
+        </ul>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </header>
+
+  <div class="banner wrapper">
+    <div class="container">
+      <div class="slider">
+        <figure class="slide">
+          <img src="images/banner/banner-slide.png" alt="Banner 1">
+          <figcaption>
+            <span>Latest News</span>
+            <p>BodyBuilding best for you health</p>
+          </figcaption>
+        </figure>
+        <div class="indicators clearfix">
+          <ul>
+            <li><a href="#"><span class="fa fa-square">1</span></a></li>
+            <li><a href="#"><span class="fa fa-square">2</span></a></li>
+            <li><a href="#"><span class="fa fa-square">3</span></a></li>
+          </ul>
+        </div>
+        <div class="controls">
+          <a href="#"><span class="control-up">u</span></a>
+          <span class="featured-article">featured article</span>
+          <a href="#"><span class="control-down">d</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter wrapper">
+    <div class="container">
+      <form class="clearfix" action="#">
+        <label>signup to newsletter</label>
+        <div><input type="text" placeholder="YOUR NAME"></div>
+        <div><input type="text" placeholder="YOUR EMAIL ADDRESS"></div>
+        <div class="form-button"><input type="submit" value="subscribe now"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="main wrapper"></div>
 </body>
+
 </html>

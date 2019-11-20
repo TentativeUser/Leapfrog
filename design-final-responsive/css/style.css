@@ -1,0 +1,331 @@
+/* header begins */
+header.wrapper {
+  background: #212429;
+  line-height: 55px;
+}
+header nav {
+  background: transparent;
+  float: left;
+}
+header nav ul {
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  width: 100%;
+  display: none;
+  z-index: -1;
+}
+header nav:hover ul {
+  display: block;
+  z-index: 5;
+}
+header nav li {
+  background: #212429;
+  padding: 0 15px;
+}
+header nav li a {
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif;
+  border-bottom: 1px solid #3c3c3c;
+}
+header nav li:first-child a {
+  border-top: 1px solid #3c3c3c;
+}
+header .logo {
+  width: 9.4375em;
+  float: right;
+}
+header .social:before {
+  content: "";
+  display: block;
+  clear: both;
+  float: none;
+}
+header .social {
+  float: right;
+  border-top: 1px solid #3c3c3c;
+}
+header .social li {
+  float: left;
+  border-right: 1px solid #3c3c3c;
+}
+header .social li:first-child {
+  float: left;
+  border-left: 1px solid #3c3c3c;
+}
+header .social li a {
+  color: #fff;
+  font-size: 0.875em;
+}
+header .social li a .fa {
+  width: 3.928571428571429em;
+  height: 3.928571428571429em;
+}
+/* header ends */
+
+/* banner begins */
+.banner {
+  background: #212429;
+}
+.banner .slider .slide img {
+  width: 100%;
+}
+.banner .slider .slide figcaption {
+  color: #ffffff;
+  font-family: "Hind", sans-serif;
+  padding: 0 15px;
+}
+.banner .slider .slide figcaption span {
+  display: block;
+  font-weight: 600;
+  font-size: 1em;
+  padding-left: 2px;
+}
+.banner .slider .slide figcaption p {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  line-height: 1.25em;
+}
+.banner .slider .indicators {
+  width: 5.5em;
+  margin: 0 auto;
+}
+.banner .slider .indicators li {
+  float: left;
+  padding: 5px;
+}
+.banner .slider .indicators a {
+  text-indent: -10000px;
+  display: block;
+}
+.banner .slider .indicators span {
+  width: 1.2em;
+  height: 1.2em;
+}
+.banner .slider .controls {
+  display: none;
+}
+/* banner ends */
+
+/* newsletter begins */
+.newsletter form {
+  padding-top: 18px;
+  text-align: center;
+  background: #f9f9fb;
+  border: 1px solid #f5f5f7;
+}
+.newsletter .container {
+  background: #f7f7f7;
+}
+.newsletter form label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.4em;
+}
+.newsletter form input {
+  font-family: 'Hind', sans-serif;
+  font-weight:  300;
+  font-size: 0.9375em;
+  line-height: 3.333333333333333em;
+  display: block;
+  border: none;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.newsletter form input:focus {
+  outline: none;
+}
+.newsletter form input[type="submit"] {
+  background: #212121;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.newsletter form div {
+  line-height: 3.125em;
+  margin: 9px 15px;
+  padding: 0 15px;
+  background: #ffffff;
+}
+.newsletter form .form-button {
+  padding: 0;
+}
+/* newsletter ends */
+
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (min-width: 40em) {
+  header .logo {
+    padding-left: 30px;
+    float: left;
+  }
+  header .social {
+    border-top: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 48em) {
+  header nav ul {
+    width: auto;
+    left: auto;
+    z-index: 10;
+  }
+  header nav:hover ul {
+    display: block;
+  }
+  header nav li {
+    background: transparent;
+    padding: 0;
+    float: left;
+    padding-left: 44px;
+  }
+  header nav li:first-child {
+    padding-left: 20px;
+  }
+  header nav li:first-child a {
+    border-top: none;
+  }
+  header nav li a {
+    border-bottom: none;
+  }
+  .banner .slider .slide {
+    position: relative;
+  }
+  .banner .slider figcaption {
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    padding: 0;
+  }
+  .banner .slider .slide figcaption span {
+    letter-spacing: 2px;
+    padding-left: 2px;
+  }
+  .banner .slider .slide figcaption p {
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+  }
+
+  .newsletter form {
+    text-align: left;
+  }
+  .newsletter form > label {
+    float: left;
+    width: 22%;
+  }
+  .newsletter form > div {
+    float: left;
+    width: 22%;
+    margin: 0 4px;
+  }
+  .newsletter form label {
+    font-size: 1.25em;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 64em) {
+  header .logo {
+    padding-left: 0;
+    float: none;
+    margin: 0 auto;
+  }
+  header .social:before {
+    content: none;
+  }
+  header .social {
+    margin-top: -55px;
+  }
+  .newsletter form label {
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    width: 18%;
+  }
+  .newsletter form input {
+    font-size: 0.9375em;
+    line-height: 3.333333333333333em;
+  }
+  .newsletter form div {
+    margin: 0 15px;
+    padding: 0 15px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 75em) {
+  .banner {
+    background: url(../images/banner/banner-bg.png) repeat-x top left;
+  }
+  .banner .slider {
+    position: relative;
+  }
+  .banner .slider figcaption {
+    position: absolute;
+    left: 100px;
+    bottom: 161px;
+  }
+  .banner .slider .slide figcaption p {
+    max-width: 13.75em;
+  }
+  .banner .slider .indicators {
+    position: absolute;
+    width: auto;
+    right: 57px;
+    top: 201px;
+  }
+  .banner .slider .indicators li {
+    float: none;
+    padding: 5px;
+  }
+  .banner .slider .indicators a {
+    text-indent: -10000px;
+    display: block;
+  }
+  .banner .slider .indicators span {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  .banner .slider .controls {
+    display: block;
+    position: absolute;
+    top: 126px;
+    right: 35px;
+  }
+  .banner .slider .controls span {
+    text-indent: -10000px;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .banner .slider .controls .control-up {
+    background: url("../images/banner/control-up.png") no-repeat center;
+    width: 11px;
+    height: 21px;
+  }
+  .banner .slider .controls .control-down {
+    background: url("../images/banner/control-down.png") no-repeat center;
+    width: 11px;
+    height: 21px;
+  }
+  .banner .slider .featured-article {
+    background: url(../images/banner/featured-article.png) no-repeat center;
+    width: 10px;
+    height: 125px;
+  }
+  .newsletter form label {
+    width: 7.5em;
+    padding: 0 20px 0 15px;
+  }
+  .newsletter form div {
+    width: 17.2em;
+    margin: 0 15px;
+    padding: 0 15px;
+  }
+}
