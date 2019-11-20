@@ -308,10 +308,6 @@ header .social {
 .posts .main .post .likes li {
   float: left;
 }
-.posts .main .post .social,
-.posts .sidebar .lists .right {
-  float: right;
-}
 footer .container {
   padding: 0;
 }
@@ -502,6 +498,10 @@ header .main-wrapper {
   font-size: 1.25em;
   line-height: 1.8em;
   padding: 0 58px 40px;
+}
+.posts .main .post .social,
+.posts .sidebar .lists .right {
+  float: right;
 }
 .posts .sidebar {
   font-family: "Hind", sans-serif;
