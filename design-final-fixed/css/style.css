@@ -250,7 +250,7 @@ header .social li a .icon {
 .banner .slider .slide img {
   width: 100%;
 }
-footer {
+footer.wrapper {
   background: #212429;
   color: #f9f9fb;
   font-weight: 300;

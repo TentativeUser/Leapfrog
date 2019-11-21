@@ -1,4 +1,5 @@
 .wrapper {
+  min-width: 73.125em;
   background: #f7f7f7;
 }
 .container {
