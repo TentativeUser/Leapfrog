@@ -414,7 +414,7 @@ header .social li a .icon {
 /* post ends */
 
 /* footer begins */
-footer {
+footer.wrapper {
   background: #212429;
   color: #f9f9fb;
   font-weight: 300;
