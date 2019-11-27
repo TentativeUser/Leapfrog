@@ -95,7 +95,7 @@ function Slider(className, ind) {
       ele.classList.remove('active');
     });
     indicators.forEach(function(ele, ind) {
-      if (ind == counter) {
+      if (ind === counter) {
         ele.classList.add('active');
       }
     });
@@ -113,7 +113,7 @@ function Slider(className, ind) {
       var a = document.createElement('a');
       a.href = '#';
       a.innerText = ind;
-      if (ind == counter) {
+      if (ind === counter) {
         a.classList.add('active');
       }
       li.appendChild(a);
@@ -169,7 +169,7 @@ function Slider(className, ind) {
     }, timeout);
     intervalID = setInterval(function() {
       flag ? shiftLeft() : shiftRight();
-      if (counter == images.length - 1 || counter == 0) {
+      if (counter === images.length - 1 || counter === 0) {
         flag = !flag;
       }
     }, holdTimes);
@@ -210,7 +210,7 @@ function Slider(className, ind) {
     }, timeout);
     intervalID = setInterval(function() {
       flag ? shiftLeft() : shiftRight();
-      if (counter == images.length - 1 || counter == 0) {
+      if (counter === images.length - 1 || counter === 0) {
         flag = !flag;
       }
     }, holdTimes);
@@ -243,7 +243,7 @@ function Slider(className, ind) {
     }, timeout);
     intervalID = setInterval(function() {
       flag ? shiftLeft() : shiftRight();
-      if (counter == images.length - 1 || counter == 0) {
+      if (counter === images.length - 1 || counter === 0) {
         flag = !flag;
       }
     }, holdTimes);
@@ -258,7 +258,7 @@ function Slider(className, ind) {
     indicators.forEach(function(ele, ind) {
       ele.addEventListener('click', function(event) {
         event.preventDefault();
-        if (counter != ind && !btnNext.disabled) {
+        if (counter !== ind && !btnNext.disabled) {
           indicatorAnimate(counter, ind);
         }
       });
@@ -271,7 +271,7 @@ function Slider(className, ind) {
   function autoSlide() {
     intervalID = setInterval(function() {
       flag ? shiftLeft() : shiftRight();
-      if (counter == images.length - 1 || counter == 0) {
+      if (counter === images.length - 1 || counter === 0) {
         flag = !flag;
       }
     }, holdTimes);
