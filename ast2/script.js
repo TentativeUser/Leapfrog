@@ -16,12 +16,12 @@ function SliderMain(selector) {
     }
     var args = Array.from(arguments);
     Array.from(container).forEach(function(value, index) {
-      new Slider(selector, index).init(args[index]);
+      new Slider(value).init(args[index]);
     });
   };
 }
 
-function Slider(className, ind) {
+function Slider(container) {
   /* Slider Structure Properties */
   var slide;
   var images;
@@ -48,7 +48,6 @@ function Slider(className, ind) {
    * Initializes properties and sequences the actions to be performed for slider
    */
   this.init = function(option) {
-    container = document.getElementsByClassName(className)[ind || 0];
     slide = container.getElementsByClassName('image-wrapper')[0];
     images = slide.getElementsByTagName('img');
     setup(option);
