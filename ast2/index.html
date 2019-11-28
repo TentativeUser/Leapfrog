@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="carousel-container">
+      <div class="image-wrapper">
+        <img src="images/slide1.jpg" alt="Slide 1">
+        <img src="images/slide2.jpg" alt="Slide 2">
+        <img src="images/slide3.jpg" alt="Slide 3">
+      </div>
+    </div>
+    <div class="carousel-container">
+      <div class="image-wrapper">
+        <img src="images/slide1.jpg" alt="Slide 1">
+        <img src="images/slide2.jpg" alt="Slide 2">
+        <img src="images/slide3.jpg" alt="Slide 3">
+        <img src="images/slide4.jpg" alt="Slide 4">
+        <img src="images/slide5.jpg" alt="Slide 5">
+        <img src="images/slide6.jpg" alt="Slide 6">
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script>
+    new SliderMain('.carousel-container')
+      .init(
+        { holdTimes: 4000, animationTimes: 1000 },
+        { holdTimes: 3000, animationTimes: 1500 }
+      );
+  </script>
+</body>
+
+</html>
