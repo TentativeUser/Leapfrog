@@ -15,7 +15,6 @@ function SliderMain(selector) {
       container = document.getElementsByClassName(selector);
     }
     var args = Array.from(arguments);
-    console.log(args);
     Array.from(container).forEach(function(value, index) {
       new Slider(selector, index).init(args[index]);
     });
