@@ -25,6 +25,7 @@
     this.directionY = 1;
     this.element = null;
     this.type = null;
+    this.boxes = [];
 
     this.draw = function() {
       self.element.style.left = self.x + 'px';
@@ -75,6 +76,8 @@
         var value = counter.innerText;
         value = Array.from(divs).length;
         counter.innerText = value;
+        var index = self.boxes.indexOf(self);
+        self.boxes.splice(index, 1);
         if (value == 0) {
           var h2 = document.getElementsByTagName('h2')[0];
           h2.innerText = 'You Win';
@@ -100,6 +103,7 @@
     };
 
     this.detectCollision = function(boxes) {
+      self.boxes = boxes;
       boxes.forEach(function(value) {
         if (value !== self) {
           if (self.overlaps(value)) {
