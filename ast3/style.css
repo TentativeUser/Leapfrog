@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+}
+.container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #2a2a2a;
+  background: #c0c0c0;
+  margin: 50px 0 100px;
+}
+.box {
+  position: absolute;
+  background: #ec1a72;
+}
+.ball {
+  position: absolute;
+  background: #ec1a72;
+  border-radius: 50%;
+}
+.ant,
+.antsmash,
+.fly,
+.flysmash,
+.ckrh,
+.ckrhsmash,
+.fbant,
+.fbantsmash {
+  position: absolute;
+  background-image: url(./images/ant.gif);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.antsmash {
+  background-image: url(./images/antsmash.png);
+}
+
+.fly {
+  background-image: url(./images/fly.gif);
+}
+.flysmash {
+  background-image: url(./images/flysmash.png);
+}
+
+.ckrh {
+  background-image: url(./images/ckrh.gif);
+}
+.ckrhsmash {
+  background-image: url(./images/ckrhsmash.png);
+}
+
+.fbant {
+  background-image: url(./images/fbant.gif);
+}
+.fbantsmash {
+  background-image: url(./images/fbantsmash.png);
+}
