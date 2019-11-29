@@ -15,6 +15,10 @@ body {
   background: #c0c0c0;
   margin: 50px 0 100px;
 }
+#antsmasher {
+  background-image: url(./images/background_cross_promotion.png);
+  background-size: contain;
+}
 .box {
   position: absolute;
   background: #ec1a72;
