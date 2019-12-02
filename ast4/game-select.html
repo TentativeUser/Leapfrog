@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car Lane Game</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <ul>
+        <li><a href="#" id="one">One car per lane</a></li>
+        <li><a href="#" id="two">Two car per lane</a></li>
+        <li><a href="#" id="random">Random cars per lane</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var one = document.getElementById('one');
+      var two = document.getElementById('two');
+      var random = document.getElementById('random');
+      one.addEventListener('click', function (event) {
+        event.preventDefault();
+        localStorage.setItem('perLane', 1);
+        window.location.href = './game.html';
+      });
+      two.addEventListener('click', function (event) {
+        event.preventDefault();
+        localStorage.setItem('perLane', 2);
+        window.location.href = './game.html';
+      });
+      random.addEventListener('click', function (event) {
+        event.preventDefault();
+        localStorage.setItem('perLane', 3);
+        window.location.href = './game.html';
+      });
+    })();
+  </script>
+</body>
+
+</html>
