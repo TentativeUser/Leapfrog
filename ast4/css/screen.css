@@ -2,69 +2,58 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
 }
+
 .container {
   width: 100%;
   height: 100%;
-  top: 0px;
-  overflow: hidden;
-  position: relative;
+  background: url(../images/road.png) repeat-y center;
+  text-align: center;
+  background-color: #80be1f;
+  font-family: 'Helvetica', sans-serif;
+  letter-spacing: 1px;
 }
-.background {
-  width: 100%;
-  height: 500%;
-  position: absolute;
-  background: #80be1f;
-}
-.roadblocks {
-  width: 360px;
+.container:after {
+  content: '';
+  display: inline-block;
   height: 100%;
-  position: relative;
-  background: url(images/bg/roadblocks.png) repeat left top;
+  vertical-align: middle;
 }
-.road {
-  width: 340px;
-  height: 100%;
-  position: relative;
-  background: url(images/bg/road.png) repeat left top;
+.center {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #ffffff;
+  width: 320px;
+  margin-left: 5px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
 }
-.divider {
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  background: url(images/bg/lane-divider.png) repeat-y left top;
+.center li {
+  line-height: 50px;
+  list-style: none;
 }
-.tree2,
-.tree1 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: url(images/bg/tree1.png) no-repeat center;
+.center li a {
+  font-size: 30px;
+  color: #ffffff;
+  text-decoration: none;
 }
-.tree2 {
-  background: url(images/bg/tree2.png) no-repeat center;
+.center li a:hover {
+  text-decoration: underline;
 }
-
-.score {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  width: 180px;
-  padding: 5px;
-  color: #434343;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.6);
+.center p {
+  line-height: 1.5;
 }
 
 .cars {
-  position: absolute;
-  background-image: url(images/cars/cars.png);
+  display: inline-block;
+  background-image: url(../images/cars.png);
   background-repeat: no-repeat;
   z-index: 10;
 }
@@ -75,7 +64,7 @@ body {
   background-position: -6px -6px;
 }
 
-.ambulance-crash {
+.ambulance_crash {
   width: 70px;
   height: 140px;
   background-position: -88px -6px;
@@ -175,4 +164,13 @@ body {
   width: 70px;
   height: 140px;
   background-position: -408px -290px;
+}
+
+.car-images li {
+  border-radius: 8px;
+  background-color: #c0c0c04a;
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 10px;
+  padding: 10px 0;
 }

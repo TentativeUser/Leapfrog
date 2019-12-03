@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Car Lane Game</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Car Game</title>
+  <link rel="stylesheet" href="./css/screen.css">
 </head>
 
 <body>
@@ -27,46 +27,7 @@
       </div>
     </div>
   </div>
-  <script>
-    (function () {
-      var ambulance = document.getElementById('ambulance');
-      var audi = document.getElementById('audi');
-      var black_viper = document.getElementById('black_viper');
-      var car = document.getElementById('car');
-      var police = document.getElementById('police');
-      var taxi = document.getElementById('taxi');
-      ambulance.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'ambulance');
-        window.location.href = './index.html';
-      });
-      audi.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'audi');
-        window.location.href = './index.html';
-      });
-      black_viper.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'black_viper');
-        window.location.href = './index.html';
-      });
-      car.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'car');
-        window.location.href = './index.html';
-      });
-      police.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'police');
-        window.location.href = './index.html';
-      });
-      taxi.addEventListener('click', function (event) {
-        event.preventDefault();
-        localStorage.setItem('playerCar', 'taxi');
-        window.location.href = './index.html';
-      });
-    })();
-  </script>
+  <script src="./js/screens/select_car.js"></script>
 </body>
 
 </html>
