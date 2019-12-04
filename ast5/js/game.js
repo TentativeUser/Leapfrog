@@ -100,7 +100,9 @@ function Game(element) {
         birdObj.x < value.x + value.width &&
         birdObj.x + birdObj.width > value.x
       ) {
-        clearInterval(intervalId);
+        if (birdObj.y < value.yTopPipe || birdObj.y > value.yBottomPipe) {
+          clearInterval(intervalId);
+        }
       }
     });
   };
