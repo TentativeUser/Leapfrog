@@ -7,12 +7,13 @@ function Games(selector, numInstances) {
   h1.style.fontFamily = `'Helvetica', sans-serif`;
   h1.style.color = '#ffffff';
   body.insertBefore(h1, container);
+  var types = ['space', 'enter'];
   this.init = function() {
     for (var i = 0; i < numInstances; i++) {
       var contain = document.createElement('div');
       contain.style.display = 'inline-block';
       container.appendChild(contain);
-      new Game(contain).init();
+      new Game(contain).init(types[i]);
     }
   };
 }
@@ -20,7 +21,6 @@ function Game(element) {
   var width = GAMEWIDTH;
   var height = 512;
   var bgObj = null;
-  var bgElement = null;
   var gameDiv = null;
   var birdObj = null;
   var moved = 0;
@@ -31,6 +31,7 @@ function Game(element) {
   var startBtn = document.createElement('button');
   var intervalId;
   var scoreDiv = null;
+  var keys = 'space';
 
   var createElement = () => {
     var gameWrapper = document.createElement('div');
@@ -66,11 +67,29 @@ function Game(element) {
     startBtn.style.background = 'url(images/play.png) transparent';
     gameDiv.appendChild(startBtn);
   };
+  var createScore = () => {
+    scoreDiv = document.createElement('div');
+    scoreDiv.style.position = 'absolute';
+    scoreDiv.style.top = 0 + 'px';
+    scoreDiv.style.right = 0 + 'px';
+    scoreDiv.style.font = '';
+    scoreDiv.innerText = '0';
+    element.appendChild(scoreDiv);
+  };
   var spaceActionListener = event => {
     var keyCode = event.keyCode;
-    if (keyCode == 32) {
-      if (birdObj.playing) {
-        birdObj.moveUp();
+    if (keys === 'space') {
+      if (keyCode == 32) {
+        if (birdObj.playing) {
+          birdObj.moveUp();
+        }
+      }
+    }
+    if (keys === 'enter') {
+      if (keyCode == 13) {
+        if (birdObj.playing) {
+          birdObj.moveUp();
+        }
       }
     }
   };
@@ -88,10 +107,12 @@ function Game(element) {
     });
     if (pipes.length !== 0 && pipes[0]) {
       if (pipes[0].x + pipes[0].width <= 0) {
+        var scoreSound = new Audio();
+        scoreSound.src = 'sounds/sfx_coins.mp3';
+        scoreSound.play();
         pipes[0].removeSelf();
         pipes.splice(0, 1);
         currentScore++;
-        console.log(currentScore);
       }
       checkCollision();
     }
@@ -124,6 +145,9 @@ function Game(element) {
           var fallDown = setInterval(function() {
             birdObj.fallDown();
           }, 10);
+          var fallSound = new Audio();
+          fallSound.src = 'sounds/sfx_die.mp3';
+          fallSound.play();
           document.removeEventListener('keydown', spaceActionListener);
           startBtn.removeEventListener('click', clickActionListener);
           clearInterval(intervalId);
@@ -145,11 +169,13 @@ function Game(element) {
 
   var clickActionListener = event => {
     gameDiv.removeChild(startBtn);
+    createScore();
     document.addEventListener('keydown', spaceActionListener);
     intervalId = setInterval(update, 30);
   };
 
-  this.init = () => {
+  this.init = key => {
+    keys = key;
     createElement();
     createBird();
     createStart();
