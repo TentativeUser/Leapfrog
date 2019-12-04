@@ -9,7 +9,10 @@ function Games(selector, numInstances) {
   body.insertBefore(h1, container);
   this.init = function() {
     for (var i = 0; i < numInstances; i++) {
-      new Game(container).init();
+      var contain = document.createElement('div');
+      contain.style.display = 'inline-block';
+      container.appendChild(contain);
+      new Game(contain).init();
     }
   };
 }
@@ -72,11 +75,8 @@ function Game(element) {
     }
   };
   var update = () => {
-    // var continuePlay;
     bgObj.update();
     birdObj.update();
-    // if (continuePlay === true) {
-    // }
     moved++;
     if (moved % 90 === 0) {
       pipe = new Pipes(gameDiv);
@@ -157,4 +157,4 @@ function Game(element) {
   };
 }
 
-new Games('flappy', 1).init();
+new Games('flappy', 2).init();
