@@ -85,9 +85,10 @@ function Game(element, key) {
 
   var spaceActionListener = event => {
     var keyCode = event.keyCode;
-    if (keyCode == key) {
+    if (keyCode == keys) {
       if (birdObj.playing) {
         birdObj.moveUp();
+        birdObj.dy = 0;
       }
     }
   };
@@ -152,10 +153,7 @@ function Game(element, key) {
           collisionHappens();
         }
       }
-      if (
-        birdObj.x >= value.x + value.width &&
-        birdObj.x + birdObj.width <= value.x
-      ) {
+      if (birdObj.x + birdObj.width >= value.x && birdObj.x <= value.x) {
         if (birdObj.y <= value.yTopPipe || birdObj.y >= value.yBottomPipe) {
           collisionHappens();
         }

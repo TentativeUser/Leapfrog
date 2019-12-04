@@ -22,6 +22,7 @@ function Bird(parent) {
   };
 
   var gravityEffect = () => {
+    this.dy++;
     this.y = this.y + this.dy;
     bird.style.top = this.y + 'px';
   };
