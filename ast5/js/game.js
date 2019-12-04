@@ -7,17 +7,18 @@ function Games(selector, numInstances) {
   h1.style.fontFamily = `'Helvetica', sans-serif`;
   h1.style.color = '#ffffff';
   body.insertBefore(h1, container);
-  var types = ['space', 'enter'];
+  var types = [32, 13];
   this.init = function() {
     for (var i = 0; i < numInstances; i++) {
       var contain = document.createElement('div');
       contain.style.display = 'inline-block';
       container.appendChild(contain);
-      new Game(contain).init(types[i]);
+      new Game(contain, types[i]).init();
     }
   };
 }
-function Game(element) {
+
+function Game(element, key) {
   var width = GAMEWIDTH;
   var height = 512;
   var bgObj = null;
@@ -31,7 +32,7 @@ function Game(element) {
   var startBtn = document.createElement('button');
   var intervalId;
   var scoreDiv = null;
-  var keys = 'space';
+  var keys = key || 32;
 
   var createElement = () => {
     var gameWrapper = document.createElement('div');
@@ -70,29 +71,27 @@ function Game(element) {
   var createScore = () => {
     scoreDiv = document.createElement('div');
     scoreDiv.style.position = 'absolute';
+    scoreDiv.style.width = '100px';
+    scoreDiv.style.height = '100px';
     scoreDiv.style.top = 0 + 'px';
     scoreDiv.style.right = 0 + 'px';
-    scoreDiv.style.font = '';
-    scoreDiv.innerText = '0';
-    element.appendChild(scoreDiv);
+    scoreDiv.style.fontFamily = `'FlappyScore'`;
+    scoreDiv.style.fontSize = '30px';
+    scoreDiv.style.color = '#ffffff';
+    scoreDiv.innerHTML = '<h2>0</h2>';
+    scoreDiv.style.zIndex = '20';
+    gameDiv.appendChild(scoreDiv);
   };
+
   var spaceActionListener = event => {
     var keyCode = event.keyCode;
-    if (keys === 'space') {
-      if (keyCode == 32) {
-        if (birdObj.playing) {
-          birdObj.moveUp();
-        }
-      }
-    }
-    if (keys === 'enter') {
-      if (keyCode == 13) {
-        if (birdObj.playing) {
-          birdObj.moveUp();
-        }
+    if (keyCode == key) {
+      if (birdObj.playing) {
+        birdObj.moveUp();
       }
     }
   };
+
   var update = () => {
     bgObj.update();
     birdObj.update();
@@ -113,6 +112,11 @@ function Game(element) {
         pipes[0].removeSelf();
         pipes.splice(0, 1);
         currentScore++;
+        if (highScore < currentScore) {
+          highScore = currentScore;
+          localStorage.setItem('highScore', highScore);
+        }
+        scoreDiv.innerHTML = `<h2>${currentScore}</h2>`;
       }
       checkCollision();
     }
@@ -125,6 +129,11 @@ function Game(element) {
       var fallDown = setInterval(function() {
         birdObj.fallDown();
       }, 10);
+      var fallSound = new Audio();
+      fallSound.src = 'sounds/sfx_die.mp3';
+      fallSound.play();
+      document.removeEventListener('keydown', spaceActionListener);
+      startBtn.removeEventListener('click', clickActionListener);
       clearInterval(intervalId);
       setTimeout(() => {
         this.resetGame();
@@ -140,30 +149,42 @@ function Game(element) {
         birdObj.x + birdObj.width > value.x
       ) {
         if (birdObj.y < value.yTopPipe || birdObj.y > value.yBottomPipe) {
-          birdObj.changeImage();
-          counter = 0;
-          var fallDown = setInterval(function() {
-            birdObj.fallDown();
-          }, 10);
-          var fallSound = new Audio();
-          fallSound.src = 'sounds/sfx_die.mp3';
-          fallSound.play();
-          document.removeEventListener('keydown', spaceActionListener);
-          startBtn.removeEventListener('click', clickActionListener);
-          clearInterval(intervalId);
-          setTimeout(() => {
-            this.resetGame();
-            clearInterval(fallDown);
-          }, 3000);
+          collisionHappens();
+        }
+      }
+      if (
+        birdObj.x >= value.x + value.width &&
+        birdObj.x + birdObj.width <= value.x
+      ) {
+        if (birdObj.y <= value.yTopPipe || birdObj.y >= value.yBottomPipe) {
+          collisionHappens();
         }
       }
     });
+  };
+
+  var collisionHappens = () => {
+    birdObj.changeImage();
+    var fallDown = setInterval(function() {
+      birdObj.fallDown();
+    }, 10);
+    var fallSound = new Audio();
+    fallSound.src = 'sounds/sfx_die.mp3';
+    fallSound.play();
+    document.removeEventListener('keydown', spaceActionListener);
+    startBtn.removeEventListener('click', clickActionListener);
+    clearInterval(intervalId);
+    setTimeout(() => {
+      this.resetGame();
+      clearInterval(fallDown);
+    }, 3000);
   };
 
   this.resetGame = () => {
     while (element.hasChildNodes()) {
       element.removeChild(element.lastChild);
     }
+    currentScore = 0;
     this.init();
   };
 
@@ -174,8 +195,7 @@ function Game(element) {
     intervalId = setInterval(update, 30);
   };
 
-  this.init = key => {
-    keys = key;
+  this.init = () => {
     createElement();
     createBird();
     createStart();

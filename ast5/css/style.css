@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'FlappyScore';
+  src: url(../fonts/FB.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
