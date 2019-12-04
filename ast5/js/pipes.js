@@ -1,6 +1,6 @@
 function Pipes(parent) {
   this.y = 0;
-  this.width = 138;
+  this.width = 52;
   this.element = null;
   this.x = parent.offsetWidth;
   var gap = 150;
