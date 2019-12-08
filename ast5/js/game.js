@@ -46,10 +46,17 @@ function Game(element, key) {
     gameDiv.style.position = 'relative';
     gameDiv.style.overflow = 'hidden';
     gameDiv.style.backgroundImage = 'url(images/bg1.png)';
+    var info = document.createElement('div');
+    info.style.color = '#ffffff';
+    info.style.fontFamily = `Helvetica, sans-serif`;
+    info.style.fontSize = `14px`;
+    var use_key = keys === 32 ? 'SpaceBar' : keys === 13 ? 'Enter' : null;
+    info.innerHTML = `<h2>Use ${use_key} to move bird.</h2>`;
     bgObj = new Background(gameDiv);
     bgElement = bgObj.createObject();
     gameWrapper.appendChild(gameDiv);
     element.appendChild(gameWrapper);
+    element.appendChild(info);
   };
   var createBird = () => {
     birdObj = new Bird(gameDiv);
