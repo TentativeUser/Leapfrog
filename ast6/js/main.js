@@ -34,4 +34,4 @@ class Helix {
   };
 }
 
-new Helix('container', 10, 15, 10, 0.1);
+new Helix('container', 20, 15, 10, 0.1);

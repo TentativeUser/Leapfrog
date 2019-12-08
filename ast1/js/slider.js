@@ -1,12 +1,3 @@
-function SliderMain(className) {
-  var container = document.getElementsByClassName(className);
-  this.init = function() {
-    Array.from(container).forEach(function(value, index) {
-      new Slider(className, index).init();
-    });
-  };
-}
-
 function Slider(className, ind) {
   /* Slider Structure Properties */
   var slide;
@@ -15,6 +6,7 @@ function Slider(className, ind) {
   var container;
   /* Button and Indicator Properties */
   var indicators = [];
+  var indicatorLI = [];
   var btnPrev;
   var btnNext;
   /* Image Sliding Event Properties */
@@ -35,8 +27,10 @@ function Slider(className, ind) {
   this.init = function() {
     container = document.getElementsByClassName(className)[ind || 0];
     slide = container.getElementsByClassName('image-wrapper')[0];
+    slide.style.position = 'absolute';
+    slide.style.width = '100%';
+    slide.style.height = '100%';
     images = slide.getElementsByTagName('img');
-    imgSize = container.clientWidth;
     positionImages();
     createButtons();
     createIndicators();
@@ -48,8 +42,12 @@ function Slider(className, ind) {
    * Applies position for images in div.image-wrapper
    */
   function positionImages() {
-    Array.from(images).forEach(function(ele, ind) {
-      ele.style.left = imgSize * ind + 'px';
+    Array.prototype.slice.call(images).forEach(function(image, ind) {
+      image.style.position = 'absolute';
+    });
+    imgSize = container.clientWidth;
+    Array.prototype.slice.call(images).forEach(function(image, ind) {
+      image.style.left = imgSize * ind + 'px';
     });
   }
 
@@ -58,15 +56,48 @@ function Slider(className, ind) {
    */
   function createButtons() {
     var divButtons = document.createElement('div');
-    divButtons.classList.add('controls');
+    divButtons.style.position = 'absolute';
+    divButtons.style.width = '100%';
+    divButtons.style.height = '100%';
+
     btnPrev = document.createElement('button');
     btnNext = document.createElement('button');
     btnPrev.classList.add('btn', 'btnPrev');
     btnNext.classList.add('btn', 'btnNext');
-    btnPrev.innerHTML = '<i class="fa fa-angle-left"></i>';
-    btnNext.innerHTML = '<i class="fa fa-angle-right"></i>';
     divButtons.appendChild(btnPrev);
     divButtons.appendChild(btnNext);
+
+    var btns = divButtons.getElementsByClassName('btn');
+    Array.prototype.slice.call(btns).forEach(function(btn) {
+      btn.style.position = 'absolute';
+      btn.style.top = '45%';
+      btn.style.color = 'rgba(255, 255, 255, 0.8)';
+      btn.style.margin = '0 10px';
+      btn.style.background = 'none';
+      btn.style.border = 'none';
+      btn.style.fontSize = '50px';
+      btn.style.lineHeight = 1;
+      btn.style.cursor = 'pointer';
+      btn.style.textShadow = '3px 3px #000000';
+      if (btn === btnPrev) {
+        btn.style.left = '0';
+        btn.innerHTML = '<i class="fa fa-angle-left"></i>';
+      }
+      if (btn === btnNext) {
+        btn.style.right = '0';
+        btn.innerHTML = '<i class="fa fa-angle-right"></i>';
+      }
+      if (btn === document.activeElement) {
+        btn.style.outline = 'none';
+      }
+      btn.addEventListener('mouseover', function(event) {
+        btn.style.color = 'rgba(255, 255, 255, 1)';
+      });
+      btn.addEventListener('mouseout', function(event) {
+        btn.style.color = 'rgba(255, 255, 255, 0.8)';
+      });
+    });
+
     container.appendChild(divButtons);
   }
 
@@ -76,7 +107,7 @@ function Slider(className, ind) {
    */
   function positionIndicators(indicatorContainer) {
     var indicatorWidth = 0;
-    var lists = indicatorContainer.getElementsByTagName('li');
+    var lists = indicatorLI;
     var eleHeight = 0;
     Array.from(lists).forEach(function(ele) {
       indicatorWidth += ele.offsetWidth;
@@ -107,10 +138,23 @@ function Slider(className, ind) {
   function createIndicators() {
     var divIndicators = document.createElement('div');
     divIndicators.classList.add('indicators');
+    divIndicators.style.position = 'relative';
+    divIndicators.style.margin = '0 auto';
+    divIndicators.style.height = '20px';
     var ul = document.createElement('ul');
+    ul.classList.add('clearfix');
+    ul.style.display = 'inline-block';
+    ul.style.listStyle = 'none';
     Array.from(images).forEach(function(ele, ind) {
       var li = document.createElement('li');
+      li.style.float = 'left';
+      if (ind !== 0) li.style.paddingLeft = '5px';
       var a = document.createElement('a');
+      a.style.display = 'inline-block';
+      a.style.border = '2px solid #ffffff';
+      a.style.width = '10px';
+      a.style.height = '10px';
+      a.style.textIndent = '-10000px';
       a.href = '#';
       a.innerText = ind;
       if (ind === counter) {
@@ -118,11 +162,12 @@ function Slider(className, ind) {
       }
       li.appendChild(a);
       indicators.push(a);
+      indicatorLI.push(li);
       ul.appendChild(li);
       divIndicators.appendChild(ul);
       container.appendChild(divIndicators);
     });
-    positionIndicators(divIndicators);
+    positionIndicators(ul);
   }
 
   /**

@@ -19,20 +19,21 @@ function Games(selector, numInstances) {
 }
 
 function Game(element, key) {
-  var width = GAMEWIDTH;
+  var moved = 0;
+  var pipes = [];
+  var pipe = null;
   var height = 512;
   var bgObj = null;
   var gameDiv = null;
+  var overDiv = null;
   var birdObj = null;
-  var moved = 0;
-  var highScore = localStorage.getItem('highScore') || 0;
-  var currentScore = 0;
-  var pipe = null;
-  var pipes = [];
-  var startBtn = document.createElement('button');
-  var intervalId;
   var scoreDiv = null;
   var keys = key || 32;
+  var currentScore = 0;
+  var intervalId = null;
+  var width = GAMEWIDTH;
+  var startBtn = document.createElement('button');
+  var highScore = localStorage.getItem('highScore') || 0;
 
   var createElement = () => {
     var gameWrapper = document.createElement('div');
@@ -71,16 +72,32 @@ function Game(element, key) {
   var createScore = () => {
     scoreDiv = document.createElement('div');
     scoreDiv.style.position = 'absolute';
-    scoreDiv.style.width = '100px';
+    scoreDiv.style.width = '100%';
     scoreDiv.style.height = '100px';
-    scoreDiv.style.top = 0 + 'px';
-    scoreDiv.style.right = 0 + 'px';
+    scoreDiv.style.top = 10 + 'px';
+    scoreDiv.style.left = 0 + 'px';
     scoreDiv.style.fontFamily = `'FlappyScore'`;
     scoreDiv.style.fontSize = '30px';
     scoreDiv.style.color = '#ffffff';
     scoreDiv.innerHTML = '<h2>0</h2>';
     scoreDiv.style.zIndex = '20';
     gameDiv.appendChild(scoreDiv);
+  };
+  var createGameOver = () => {
+    overDiv = document.createElement('div');
+    overDiv.style.position = 'absolute';
+    overDiv.style.width = '100px';
+    overDiv.style.height = '100px';
+    overDiv.style.top = '30%';
+    overDiv.style.left = '110px';
+    overDiv.style.fontFamily = `Helvetica, sans-serif`;
+    overDiv.style.fontSize = '12px';
+    overDiv.style.fontWeight = 'normal';
+    overDiv.style.color = '#ffffff';
+    overDiv.innerHTML =
+      `<h2>Score ${currentScore}</h2>` + `<h2>Highest ${highScore}</h2>`;
+    overDiv.style.zIndex = '20';
+    gameDiv.appendChild(overDiv);
   };
 
   var spaceActionListener = event => {
@@ -136,6 +153,7 @@ function Game(element, key) {
       document.removeEventListener('keydown', spaceActionListener);
       startBtn.removeEventListener('click', clickActionListener);
       clearInterval(intervalId);
+      createGameOver();
       setTimeout(() => {
         this.resetGame();
         clearInterval(fallDown);
@@ -149,12 +167,10 @@ function Game(element, key) {
         birdObj.x < value.x + value.width &&
         birdObj.x + birdObj.width > value.x
       ) {
-        if (birdObj.y < value.yTopPipe || birdObj.y > value.yBottomPipe) {
-          collisionHappens();
-        }
-      }
-      if (birdObj.x + birdObj.width >= value.x && birdObj.x <= value.x) {
-        if (birdObj.y <= value.yTopPipe || birdObj.y >= value.yBottomPipe) {
+        if (
+          birdObj.y < value.yTopPipe ||
+          birdObj.y + birdObj.height > value.yBottomPipe
+        ) {
           collisionHappens();
         }
       }
@@ -172,6 +188,7 @@ function Game(element, key) {
     document.removeEventListener('keydown', spaceActionListener);
     startBtn.removeEventListener('click', clickActionListener);
     clearInterval(intervalId);
+    createGameOver();
     setTimeout(() => {
       this.resetGame();
       clearInterval(fallDown);
@@ -182,6 +199,7 @@ function Game(element, key) {
     while (element.hasChildNodes()) {
       element.removeChild(element.lastChild);
     }
+    pipes = [];
     currentScore = 0;
     this.init();
   };

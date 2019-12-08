@@ -15,10 +15,6 @@ body {
   background: #c0c0c0;
   margin: 50px 0 100px;
 }
-#antsmasher {
-  background-image: url(./images/background_cross_promotion.png);
-  background-size: contain;
-}
 .box {
   position: absolute;
   background: #ec1a72;
@@ -28,6 +24,12 @@ body {
   background: #ec1a72;
   border-radius: 50%;
 }
+
+#antsmasher {
+  background-image: url(./images/background_cross_promotion.png);
+  background-size: contain;
+}
+
 .ant,
 .antsmash,
 .fly,
@@ -37,8 +39,7 @@ body {
 .fbant,
 .fbantsmash {
   position: absolute;
-  background-image: url(./images/ant.gif);
-  background-position: center;
+  background: url(./images/ant.gif) center;
   background-size: 100% 100%;
 }
 .antsmash {
