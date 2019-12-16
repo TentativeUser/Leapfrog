@@ -369,7 +369,7 @@ class Level3 {
     let x2 = mid + (141 / 640) * GAME_WIDTH;
 
     this.parent = parent;
-    this.name = 'level1';
+    this.name = 'level3';
     this.completedImage = null;
     this.compositeObjects = [];
     this.animationRequest = null;

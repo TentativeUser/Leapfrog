@@ -12,6 +12,7 @@ class ScreenLevel {
     this.parent = parent;
     this.element = null;
     this.imagesNames = ['level1.png', 'level2.png', 'level3.png'];
+    this.images = [];
     this.levelImages = [];
 
     this.createScreenElement();
@@ -38,10 +39,17 @@ class ScreenLevel {
       img.style.width = '100%';
       img.style.height = '100%';
 
+      this.images.push(img);
       this.levelImages.push(imgDiv);
       imgDiv.appendChild(img);
       this.element.appendChild(imgDiv);
     });
+    setInterval(() => {
+      this.images.forEach((img, index) => {
+        let src = localStorage.getItem(`level${index + 1}`);
+        img.src = src ? src : 'images/' + imageName;
+      });
+    }, 1000);
     this.parent.appendChild(this.element);
   }
 
