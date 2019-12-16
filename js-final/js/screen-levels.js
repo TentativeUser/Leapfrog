@@ -1,0 +1,70 @@
+/**
+ * ScrenLevel holds the levels screen for game to load level.
+ * @class ScreenLevel
+ */
+class ScreenLevel {
+  /**
+   * Creates an instance of ScreenLevel.
+   * @param {HTMLElement} parent it is container for the screen elements.
+   * @memberof ScreenLevel
+   */
+  constructor(parent) {
+    this.parent = parent;
+    this.element = null;
+    this.imagesNames = ['level1.png', 'level2.png', 'level3.png'];
+    this.levelImages = [];
+
+    this.createScreenElement();
+    this.styleScreenElement();
+  }
+
+  /**
+   * Creates the elements required for screen.
+   * @memberof ScreenLevel
+   */
+  createScreenElement() {
+    this.element = document.createElement('div');
+    this.logo = new Image();
+    this.logo.src = 'images/logo.png';
+    this.element.appendChild(this.logo);
+
+    this.imagesNames.forEach((imageName, index) => {
+      let imgDiv = document.createElement('div');
+      imgDiv.style.backgroundImage = `url(images/level${index + 1}_win.png`;
+      imgDiv.style.backgroundSize = 'contain';
+      let img = new Image();
+      let src = localStorage.getItem(`level${index + 1}`);
+      img.src = src ? src : 'images/' + imageName;
+      img.style.width = '100%';
+      img.style.height = '100%';
+
+      this.levelImages.push(imgDiv);
+      imgDiv.appendChild(img);
+      this.element.appendChild(imgDiv);
+    });
+    this.parent.appendChild(this.element);
+  }
+
+  /**
+   * Styles the elements of the screen.
+   * @memberof ScreenLevel
+   */
+  styleScreenElement() {
+    this.parent.style.textAlign = 'left';
+    let padding = (30 * GAME_WIDTH) / 640;
+    this.parent.style.padding = padding + 'px';
+    this.parent.style.width = GAME_WIDTH - 2 * padding + 'px';
+    this.parent.style.height = GAME_HEIGHT - 2 * padding + 'px';
+
+    this.logo.style.display = 'block';
+    this.logo.style.width = (184 / 640) * GAME_WIDTH + 'px';
+    this.levelImages.forEach(imgDiv => {
+      imgDiv.style.display = 'inline-block';
+      imgDiv.style.position = 'relative';
+      imgDiv.style.margin = (16 / 640) * GAME_WIDTH + 'px';
+      imgDiv.style.width = (160 / 640) * GAME_WIDTH + 'px';
+      imgDiv.style.height = (90 / 640) * GAME_WIDTH + 'px';
+      imgDiv.style.cursor = 'pointer';
+    });
+  }
+}
