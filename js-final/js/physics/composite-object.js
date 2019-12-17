@@ -18,7 +18,7 @@ class CompositeObject {
     this.velocity.y = this.velocity.y + GRAVITY * (10 / 1000);
     if (this.getLowestPoint(this.positions).y < GAME_HEIGHT - boundary) {
       this.position.y += (this.velocity.y * 10) / 100;
-      this.position.y = Math.round(this.position.y);
+      this.position.y = this.position.y | 0;
       this.draw(this.velocity);
     } else {
       this.centerOfMass();
@@ -45,6 +45,7 @@ class CompositeObject {
           this.context.moveTo(position.x, position.y);
         } else {
           this.context.lineWidth = 10;
+          this.context.strokeStyle = '#959494';
           this.context.lineTo(position.x, position.y);
           this.context.stroke();
         }
@@ -115,7 +116,8 @@ class CompositeObject {
 
     let rX = rLowestPoint.x - lLowestPoint.x;
     let rY = lLowestPoint.y - rLowestPoint.y;
-    let angle = -Math.atan(rY / rX) / 20;
+    let angle = -Math.atan(rY / rX);
+    angle = angle * 0.01;
     if (lLowestPoint.y > rLowestPoint.y + 1) {
       let cx = lLowestPoint.x;
       let cy = lLowestPoint.y;

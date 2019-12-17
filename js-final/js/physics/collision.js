@@ -1,5 +1,6 @@
 class Collision {
-  constructor() {
+  constructor(context) {
+    this.context = context;
     this.ballObjectCollisionPoint = null;
   }
 
@@ -59,7 +60,6 @@ class Collision {
     let dx, dy, m, x, y, c;
     let tempPos = [...obj.sPositions];
     let collisionPoint = null;
-    tempPos.sort((vec1, vec2) => (vec1.x > vec2.x ? 1 : -1));
 
     tempPos.forEach((vecs, index) => {
       if (index == 0) {
@@ -75,6 +75,12 @@ class Collision {
           y = (m * x + c) | 0;
           positions.push({ x, y, m });
         }
+        for (let i = 0; i >= dx; --i) {
+          c = lastVec.y - lastVec.x * m;
+          x = lastVec.x + i;
+          y = (m * x + c) | 0;
+          positions.push({ x, y, m });
+        }
         lastVec = new Vector(vecs);
       }
     });
@@ -83,11 +89,22 @@ class Collision {
     if (!m) m = 0;
     positions.push({ x, y, m });
 
+    let createLines = (a, b) => {
+      this.context.beginPath();
+      this.context.moveTo(ball.position.x, ball.position.y);
+      this.context.lineWidth = 1;
+      this.context.lineTo(a, b);
+      this.context.strokeStyle = 'blue';
+      this.context.stroke();
+      this.context.closePath();
+    };
+
     positions.forEach(vecs => {
       let diffX = vecs.x - ball.position.x;
       let diffY = vecs.y - ball.position.y;
       let dist = Math.sqrt(diffX * diffX + diffY * diffY);
       if (dist < ball.radius + 6) {
+        if (vecs.x && vecs.y) createLines(vecs.x, vecs.y);
         let x1 = vecs.x;
         let y1 = vecs.y - 5;
         if (vecs.m > 0) {
@@ -121,4 +138,6 @@ class Collision {
     }
     return collisionPoint;
   };
+
+  bottomCollistion = () => {};
 }

@@ -21,11 +21,11 @@ class Level1 {
     this.animationRequest = null;
     this.bBallPos = new Vector(x1, y);
     this.rBallPos = new Vector(x2, y);
-    this.collision = new Collision();
 
     this.createCanvas();
     this.initializeElements();
     this.paintLines();
+    this.collision = new Collision(this.context);
   }
 
   createCanvas = () => {
@@ -199,11 +199,11 @@ class Level2 {
     this.animationRequest = null;
     this.bBallPos = new Vector(x1, y1);
     this.rBallPos = new Vector(x2, y2);
-    this.collision = new Collision();
 
     this.createCanvas();
     this.initializeElements();
     this.paintLines();
+    this.collision = new Collision(this.context);
   }
   createCanvas = () => {
     this.canvas = document.createElement('canvas');
@@ -375,11 +375,11 @@ class Level3 {
     this.animationRequest = null;
     this.bBallPos = new Vector(x1, y);
     this.rBallPos = new Vector(x2, y);
-    this.collision = new Collision();
 
     this.createCanvas();
     this.initializeElements();
     this.paintLines();
+    this.collision = new Collision(this.context);
   }
 
   createCanvas = () => {

@@ -47,7 +47,7 @@ class ScreenLevel {
     setInterval(() => {
       this.images.forEach((img, index) => {
         let src = localStorage.getItem(`level${index + 1}`);
-        img.src = src ? src : 'images/' + imageName;
+        img.src = src ? src : 'images/' + this.imagesNames[index];
       });
     }, 1000);
     this.parent.appendChild(this.element);
