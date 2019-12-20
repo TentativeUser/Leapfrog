@@ -11,11 +11,6 @@ class Collision {
       return this.ballObjectCollision(obj2, obj1);
     } else if (obj1 instanceof Ball && obj2 instanceof Ball) {
       return this.ballCollision(obj1, obj2);
-    } else if (
-      obj1 instanceof CompositeObject &&
-      obj2 instanceof CompositeObject
-    ) {
-      return this.objectCollision(obj1, obj2);
     }
   };
 
@@ -36,15 +31,6 @@ class Collision {
       return false;
     }
   };
-
-  /**
-   * Detects composite object to composite object collision
-   * @param {CompositeObject} obj1 composite object drawn on screen
-   * @param {CompositeObject} obj2 composite object drawn on screen
-   * @returns {Boolean} true if collision occurs else false
-   * @memberof Collision
-   */
-  objectCollision = (obj1, obj2) => {};
 
   /**
    * Detects ball to composite object collision
@@ -89,37 +75,31 @@ class Collision {
     if (!m) m = 0;
     positions.push({ x, y, m });
 
-    let createLines = (a, b) => {
-      this.context.beginPath();
-      this.context.moveTo(ball.position.x, ball.position.y);
-      this.context.lineWidth = 1;
-      this.context.lineTo(a, b);
-      this.context.strokeStyle = 'blue';
-      this.context.stroke();
-      this.context.closePath();
-    };
-
     positions.forEach(vecs => {
+      let percentOfSlope = 0.1;
       let diffX = vecs.x - ball.position.x;
       let diffY = vecs.y - ball.position.y;
       let dist = Math.sqrt(diffX * diffX + diffY * diffY);
-      if (dist < ball.radius + 6) {
-        if (vecs.x && vecs.y) createLines(vecs.x, vecs.y);
+      if (dist < ball.radius + LINE_WIDTH / 2) {
         let x1 = vecs.x;
-        let y1 = vecs.y - 5;
+        let y1 = vecs.y - LINE_WIDTH / 2;
         if (vecs.m > 0) {
           if (diffY < 0) {
-            ball.velocity.x -= 0.1 * vecs.m;
+            obj.velocity.y = 0;
+            obj.position.y = ball.position.y - ball.radius;
+            ball.velocity.x -= percentOfSlope * vecs.m;
           }
           if (diffY > 0) {
-            ball.velocity.x += 0.1 * vecs.m;
+            ball.velocity.x += percentOfSlope * vecs.m;
           }
-        } else if (vecs.m < 0) {
+        } else {
           if (diffY < 0) {
-            ball.velocity.x += 0.1 * -vecs.m;
+            obj.velocity.y = 0;
+            obj.position.y = ball.position.y - ball.radius;
+            ball.velocity.x += percentOfSlope * -vecs.m;
           }
           if (diffY > 0) {
-            ball.velocity.x -= 0.1 * -vecs.m;
+            ball.velocity.x -= percentOfSlope * -vecs.m;
           }
         }
         collisionPoint = new Vector(x1, y1);
@@ -127,10 +107,9 @@ class Collision {
     });
     if (collisionPoint) {
       if (ball.velocity.x > 0) {
-        ball.velocity.x -= 0.03;
-      }
-      if (ball.velocity.x < 0) {
-        ball.velocity.x += 0.03;
+        ball.velocity.x -= ball.friction;
+      } else if (ball.velocity.x < 0) {
+        ball.velocity.x += ball.friction;
       }
       if (ball.velocity.x > -0.01 && ball.velocity.x < 0.01) {
         ball.velocity.x = 0;
@@ -138,6 +117,4 @@ class Collision {
     }
     return collisionPoint;
   };
-
-  bottomCollistion = () => {};
 }

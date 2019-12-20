@@ -1,6 +1,5 @@
 class CompositeObject {
   constructor(canvas, context) {
-    this.mass = 0.1;
     this.positions = [];
     this.canvas = canvas;
     this.context = context;
@@ -15,9 +14,9 @@ class CompositeObject {
 
   gravityEffect = () => {
     let boundary = (37 * GAME_HEIGHT) / 360;
-    this.velocity.y = this.velocity.y + GRAVITY * (10 / 1000);
+    this.velocity.y = this.velocity.y + GRAVITY * (8 / 1000);
     if (this.getLowestPoint(this.positions).y < GAME_HEIGHT - boundary) {
-      this.position.y += (this.velocity.y * 10) / 100;
+      this.position.y += (this.velocity.y * 8) / 100;
       this.position.y = this.position.y | 0;
       this.draw(this.velocity);
     } else {
@@ -44,7 +43,7 @@ class CompositeObject {
         if (index === 0) {
           this.context.moveTo(position.x, position.y);
         } else {
-          this.context.lineWidth = 10;
+          this.context.lineWidth = LINE_WIDTH;
           this.context.strokeStyle = '#959494';
           this.context.lineTo(position.x, position.y);
           this.context.stroke();
@@ -69,7 +68,8 @@ class CompositeObject {
   compareVectors = (vec1, vec2) => {
     let dx = Math.abs(vec1.x - vec2.x);
     let dy = Math.abs(vec1.y - vec2.y);
-    if (dx > 5 || dy > 5) {
+    let smoothnessRange = 5;
+    if (dx > smoothnessRange || dy > smoothnessRange) {
       return true;
     } else {
       return false;

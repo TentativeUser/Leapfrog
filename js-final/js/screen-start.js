@@ -26,12 +26,8 @@ class ScreenStart {
    */
   createStart() {
     this.element = document.createElement('div');
-    // this.splashVideo = document.createElement('video');
-    // this.splashSource = document.createElement('source');
     this.tapToStart = document.createElement('p');
 
-    // this.splashVideo.appendChild(this.splashSource);
-    // this.element.appendChild(this.splashVideo);
     this.element.appendChild(this.tapToStart);
     this.parent.appendChild(this.element);
   }
@@ -50,12 +46,6 @@ class ScreenStart {
     this.element.style.backgroundPosition = 'center';
     this.element.style.backgroundSize = '100%';
 
-    // this.splashSource.src = './video/brain_dots_intro.mp4';
-    // this.splashVideo.style.position = 'relative';
-    // this.splashVideo.style.top = -165 + 'px';
-    // this.splashVideo.controls = false;
-    // this.splashVideo.muted = true;
-
     this.tapToStart.style.position = 'relative';
     this.tapToStart.style.fontFamily = 'Helvetica, sans-serif';
     this.tapToStart.style.fontSize = (20 / 640) * GAME_WIDTH + 'px';
@@ -70,8 +60,6 @@ class ScreenStart {
    * @memberof ScreenStart
    */
   eventListeners() {
-    // document.addEventListener('DOMContentLoaded', this.splashVideo.play());
-    // this.splashVideo.addEventListener('ended', event_ => {
     this.tapToStart.style.top = (202 / 640) * GAME_WIDTH + 'px';
     var flashing = 0;
     var flag = true;
@@ -84,6 +72,5 @@ class ScreenStart {
     this.flagInterval = setInterval(() => {
       flag = !flag;
     }, 1000);
-    // });
   }
 }

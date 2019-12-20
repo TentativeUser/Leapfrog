@@ -38,6 +38,10 @@ class Level1 {
     this.parent.appendChild(this.canvas);
   };
 
+  sendBackBtn = btn => {
+    this.back = btn;
+  };
+
   getCanvas = () => {
     return this.canvas;
   };
@@ -136,13 +140,15 @@ class Level1 {
 
     if (
       this.blueBall.position.y <
-      GAME_HEIGHT - this.blueBall.radius - bCollHeight
+        GAME_HEIGHT - this.blueBall.radius - bCollHeight &&
+      bCollHeight < this.blueBall.position.y
     ) {
       this.blueBall.gravityEffect();
     }
     if (
       this.redBall.position.y <
-      GAME_HEIGHT - this.redBall.radius - rCollHeight
+        GAME_HEIGHT - this.redBall.radius - rCollHeight &&
+      rCollHeight < this.redBall.position.y
     ) {
       this.redBall.gravityEffect();
     }
@@ -158,13 +164,24 @@ class Level1 {
     this.context.closePath();
     this.blueBall.drawElement();
     this.redBall.drawElement();
-    let game_obj = this.collision.isCollision(this.blueBall, this.redBall);
-    if (game_obj) {
+
+    let game_win = this.collision.isCollision(this.blueBall, this.redBall);
+    let game_fail = this.redBall.boundary() || this.blueBall.boundary();
+
+    if (game_win) {
       let cData = this.canvas.toDataURL();
       localStorage.setItem(this.name, cData);
       cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
+    } else if (game_fail) {
+      cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
     }
-    if (!game_obj) {
+    if (!game_win && !game_fail) {
       this.animationRequest = requestAnimationFrame(this.redraw);
     }
   };
@@ -219,6 +236,10 @@ class Level2 {
     return this.canvas;
   };
 
+  sendBackBtn = btn => {
+    this.back = btn;
+  };
+
   initializeElements = () => {
     this.blueBall = new Ball(this.context, this.bBallPos, '#3ebfef');
     this.redBall = new Ball(this.context, this.rBallPos, '#ee86b4');
@@ -313,13 +334,15 @@ class Level2 {
 
     if (
       this.blueBall.position.y <
-      GAME_HEIGHT - this.blueBall.radius - bCollHeight
+        GAME_HEIGHT - this.blueBall.radius - bCollHeight &&
+      bCollHeight < this.blueBall.position.y
     ) {
       this.blueBall.gravityEffect();
     }
     if (
       this.redBall.position.y <
-      GAME_HEIGHT - this.redBall.radius - rCollHeight
+        GAME_HEIGHT - this.redBall.radius - rCollHeight &&
+      rCollHeight < this.redBall.position.y
     ) {
       this.redBall.gravityEffect();
     }
@@ -332,16 +355,28 @@ class Level2 {
       GAME_WIDTH,
       this.boundary
     );
+
     this.context.closePath();
     this.blueBall.drawElement();
     this.redBall.drawElement();
-    let game_obj = this.collision.isCollision(this.blueBall, this.redBall);
-    if (game_obj) {
+
+    let game_win = this.collision.isCollision(this.blueBall, this.redBall);
+    let game_fail = this.redBall.boundary() || this.blueBall.boundary();
+
+    if (game_win) {
       let cData = this.canvas.toDataURL();
       localStorage.setItem(this.name, cData);
       cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
+    } else if (game_fail) {
+      cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
     }
-    if (!game_obj) {
+    if (!game_win && !game_fail) {
       this.animationRequest = requestAnimationFrame(this.redraw);
     }
   };
@@ -396,6 +431,10 @@ class Level3 {
     return this.canvas;
   };
 
+  sendBackBtn = btn => {
+    this.back = btn;
+  };
+
   initializeElements = () => {
     this.blueBall = new Ball(this.context, this.bBallPos, '#3ebfef');
     this.redBall = new Ball(this.context, this.rBallPos, '#ee86b4');
@@ -490,13 +529,15 @@ class Level3 {
 
     if (
       this.blueBall.position.y <
-      GAME_HEIGHT - this.blueBall.radius - bCollHeight
+        GAME_HEIGHT - this.blueBall.radius - bCollHeight &&
+      bCollHeight < this.blueBall.position.y
     ) {
       this.blueBall.gravityEffect();
     }
     if (
       this.redBall.position.y <
-      GAME_HEIGHT - this.redBall.radius - rCollHeight
+        GAME_HEIGHT - this.redBall.radius - rCollHeight &&
+      rCollHeight < this.redBall.position.y
     ) {
       this.redBall.gravityEffect();
     }
@@ -512,13 +553,24 @@ class Level3 {
     this.context.closePath();
     this.blueBall.drawElement();
     this.redBall.drawElement();
-    let game_obj = this.collision.isCollision(this.blueBall, this.redBall);
-    if (game_obj) {
+
+    let game_win = this.collision.isCollision(this.blueBall, this.redBall);
+    let game_fail = this.redBall.boundary() || this.blueBall.boundary();
+
+    if (game_win) {
       let cData = this.canvas.toDataURL();
       localStorage.setItem(this.name, cData);
       cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
+    } else if (game_fail) {
+      cancelAnimationFrame(this.animationRequest);
+      setTimeout(() => {
+        this.back.click();
+      }, 1000);
     }
-    if (!game_obj) {
+    if (!game_win && !game_fail) {
       this.animationRequest = requestAnimationFrame(this.redraw);
     }
   };

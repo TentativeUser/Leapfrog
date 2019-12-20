@@ -28,6 +28,10 @@ class Game {
     });
   }
 
+  /**
+   * Creates elements for the game
+   * @memberof Game
+   */
   createElements() {
     this.element = document.createElement('div');
     this.backDiv = document.createElement('div');
@@ -44,6 +48,10 @@ class Game {
     this.parent.appendChild(this.element);
   }
 
+  /**
+   * Styles the created elements for the game
+   * @memberof Game
+   */
   styleElements() {
     this.element.style.marginTop = GAME_HEIGHT + 'px';
 
@@ -64,6 +72,11 @@ class Game {
     this.reloadDiv.style.display = 'none';
   }
 
+  /**
+   * Responsible for styling the levels choice screen to hidden and
+   * the game level to be shown
+   * @memberof Game
+   */
   styleShowLevel() {
     this.levelScreen.element.style.display = 'none';
     this.levelScreen.element.style.visibility = 'hidden';
@@ -78,6 +91,11 @@ class Game {
     this.reloadDiv.style.display = 'block';
   }
 
+  /**
+   * Responsible for styling the game level screen to hidden and
+   * the levels choice to be shown
+   * @memberof Game
+   */
   styleHideLevel() {
     this.levelScreen.element.style.display = 'block';
     this.levelScreen.element.style.visibility = 'visible';
@@ -93,6 +111,10 @@ class Game {
     this.reloadDiv.style.display = 'none';
   }
 
+  /**
+   * Adds and removes the event listeners accordingly
+   * @memberof Game
+   */
   eventListeners() {
     this.backDiv.addEventListener('click', event => {
       this.styleHideLevel();
@@ -104,6 +126,10 @@ class Game {
     });
   }
 
+  /**
+   * Responsible for request animation frame.
+   * @memberof Game
+   */
   canvasRedraw = () => {
     this.canvas = this.level.getCanvas();
 
@@ -113,12 +139,12 @@ class Game {
     };
     let removeEvent = () => {
       if (this.animate) {
-        document.removeEventListener('mouseup', redraw);
-        document.removeEventListener('mousemove', removeEvent);
+        this.canvas.removeEventListener('mouseup', redraw);
+        this.canvas.removeEventListener('mousemove', removeEvent);
       }
     };
-    document.addEventListener('mouseup', redraw);
-    document.addEventListener('mousemove', removeEvent);
+    this.canvas.addEventListener('mouseup', redraw);
+    this.canvas.addEventListener('mousemove', removeEvent);
   };
 
   /**
@@ -137,11 +163,15 @@ class Game {
 
     if (getLevel === 1) {
       this.level = new Level1(this.element);
+      this.level.sendBackBtn(this.backDiv);
     } else if (getLevel === 2) {
       if (this.level) this.level.removeSelf();
       this.level = new Level2(this.element);
+      this.level.sendBackBtn(this.backDiv);
     } else if (getLevel === 3) {
+      if (this.level) this.level.removeSelf();
       this.level = new Level3(this.element);
+      this.level.sendBackBtn(this.backDiv);
     }
   }
 }

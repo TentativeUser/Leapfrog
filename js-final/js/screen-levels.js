@@ -28,7 +28,6 @@ class ScreenLevel {
     this.logo = new Image();
     this.logo.src = 'images/logo.png';
     this.element.appendChild(this.logo);
-
     this.imagesNames.forEach((imageName, index) => {
       let imgDiv = document.createElement('div');
       imgDiv.style.backgroundImage = `url(images/level${index + 1}_win.png`;
@@ -44,10 +43,18 @@ class ScreenLevel {
       imgDiv.appendChild(img);
       this.element.appendChild(imgDiv);
     });
+    this.coinDiv = document.createElement('div');
+    this.coins = document.createElement('span');
+    this.coinDiv.innerText = 'Coins: ';
+    this.calculateCoins();
+    this.coinDiv.appendChild(this.coins);
+    this.element.appendChild(this.coinDiv);
+
     setInterval(() => {
       this.images.forEach((img, index) => {
         let src = localStorage.getItem(`level${index + 1}`);
         img.src = src ? src : 'images/' + this.imagesNames[index];
+        this.calculateCoins();
       });
     }, 1000);
     this.parent.appendChild(this.element);
@@ -74,5 +81,17 @@ class ScreenLevel {
       imgDiv.style.height = (90 / 640) * GAME_WIDTH + 'px';
       imgDiv.style.cursor = 'pointer';
     });
+  }
+
+  calculateCoins() {
+    let coins = 0;
+    let level1_win, level2_win, level3_win;
+    level1_win = localStorage.getItem('level1');
+    level2_win = localStorage.getItem('level2');
+    level3_win = localStorage.getItem('level3');
+    coins += level1_win ? 50 : 0;
+    coins += level2_win ? 50 : 0;
+    coins += level3_win ? 50 : 0;
+    this.coins.innerText = coins;
   }
 }

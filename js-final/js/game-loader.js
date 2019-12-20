@@ -1,6 +1,7 @@
 const GAME_WIDTH = 640;
 const GAME_HEIGHT = (9 * GAME_WIDTH) / 16;
 const GRAVITY = 9.81;
+const LINE_WIDTH = (10 / 640) * GAME_WIDTH;
 
 class GameLoader {
   /**
